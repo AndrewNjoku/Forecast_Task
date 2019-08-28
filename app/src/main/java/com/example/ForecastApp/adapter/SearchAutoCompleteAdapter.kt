@@ -9,7 +9,9 @@ import android.widget.BaseAdapter
 import android.widget.Filter
 import android.widget.Filterable
 import android.widget.TextView
+import com.example.ForecastApp.DataBank.Constants.AUTOCOMPLETE_API_URL
 import com.example.ForecastApp.R
+import com.example.ForecastApp.application.App
 import com.example.ForecastApp.model.Objects.Predicitions.Prediction
 import com.example.ForecastApp.model.Objects.Predicitions.Predictions
 import com.google.gson.reflect.TypeToken
@@ -19,6 +21,7 @@ import java.net.URLEncoder
 import java.util.ArrayList
 
 class SearchAutoCompleteAdapter(private val mContext: Context) : BaseAdapter(), Filterable {
+
     private var resultList: List<Prediction> = ArrayList()
 
     override fun getCount(): Int {
@@ -44,11 +47,11 @@ class SearchAutoCompleteAdapter(private val mContext: Context) : BaseAdapter(), 
 
     override fun getFilter(): Filter {
         return object : Filter() {
-            override fun performFiltering(constraint: CharSequence?): FilterResults {
+            override fun performFiltering(constraint: CharSequence?): FilterResults? {
                 val filterResults = FilterResults()
                 if (constraint != null) {
+                    Log.e("Filter", "constraint text is not null")
                     val predictions = findLocation(mContext, constraint.toString())
-
                     // Assign the data to the FilterResults
                     filterResults.values = predictions.predictions
                     filterResults.count = predictions.count
@@ -57,7 +60,7 @@ class SearchAutoCompleteAdapter(private val mContext: Context) : BaseAdapter(), 
                 return filterResults
             }
 
-            override fun publishResults(constraint: CharSequence, results: FilterResults?) {
+            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                 if (results != null && results.count > 0) {
                     try {
                         resultList = results.values as List<Prediction>
@@ -97,10 +100,12 @@ class SearchAutoCompleteAdapter(private val mContext: Context) : BaseAdapter(), 
     }
 
     companion object {
-        private val URL: String? = null
+        private var URL: String? = null
         fun getLocationSearchUrl(queryText: String): String? {
             if (URL == null) {
-                // URL = AUTOCOMPLETE_API_URL + WeatherApplication.getAppContext().getString(R.string.google_api_key);
+
+                URL = AUTOCOMPLETE_API_URL + App.instance.getString(R.string.google_api_key)
+
             }
             try {
                 return String.format(URL!!, URLEncoder.encode(queryText, "UTF-8"))

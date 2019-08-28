@@ -15,7 +15,7 @@ class Predictions {
 
     //this list should be nullable
     var predictions: List<Prediction>? = null
-        get() = predictions ?: ArrayList()
+        get() = field ?: ArrayList()
 
     var status:String = ""
         get() = if (TextUtils.isEmpty(field)) {

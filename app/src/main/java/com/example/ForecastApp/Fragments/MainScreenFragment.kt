@@ -38,7 +38,7 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
     @Inject
     lateinit var presenter: MainScreenFragmentContract.Presenter
 
-    private val THRESHOLD = 3 //minimum chars before search
+    private val THRESHOLD = 5 //minimum chars before search
 
     private var unbinder: Unbinder? = null
 
