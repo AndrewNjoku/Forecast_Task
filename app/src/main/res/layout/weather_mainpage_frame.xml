@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A4FFFFFF"
+    android:orientation="vertical"
+    tools:context=".Activities.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searchCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btn_clear"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignRight="@+id/txt_search"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="8dp"
+                android:alpha="0.5"
+                android:src="@drawable/ic_action_cancel" />
+
+            <ProgressBar
+                android:id="@+id/mainpage_loading_indicator"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical|right"
+                android:layout_toLeftOf="@+id/btn_clear"
+                android:scaleX="3"
+                android:scaleY="3"
+                android:translationX="-55dp"
+                android:visibility="gone" />
+
+            <com.example.ForecastApp.widget.DelayAutoCompleteTextView
+                android:id="@+id/txt_search"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:hint="@string/search_hint"
+                android:maxLength="30"
+                android:singleLine="true" />
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/mainpage_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/mainpage_results"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:animateLayoutChanges="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchCard" />
+
+        <TextView
+            android:id="@+id/mainpage_try_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/try_again_text"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
