@@ -21,11 +21,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Network/ForecastService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Network/ForecastService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/RecentSearchesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/RecentSearchesAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/forecast_recent_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/forecast_recent_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/forecast_search_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/forecast_search_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_results_frame.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_results_frame.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/weather_mainpage_frame.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/weather_mainpage_frame.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,20 +58,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+            <state relative-caret-position="82">
+              <caret line="95" column="31" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+              <folding>
+                <element signature="e#2905#2968#0" expanded="true" />
+                <element signature="e#3067#3181#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/RecentSearchesAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1011">
+            <state relative-caret-position="-390">
               <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
             </state>
           </provider>
@@ -88,30 +83,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_recent_item.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            <state relative-caret-position="483">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/AppComponent.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#48#445#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_results_frame.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="37" selection-end-column="47" />
+            <state relative-caret-position="805">
+              <caret line="50" column="12" selection-start-line="49" selection-start-column="44" selection-end-line="57" selection-end-column="56" />
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer2" />
@@ -128,33 +111,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Network/ForecastService.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/weather_mainpage_frame.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Database/ForecastDatabase.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-              <folding>
-                <element signature="e#41#195#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="23">
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Utils.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Database/ForecastOpp.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="184">
+              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Constants.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Main_Elements/Forecast.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+          <provider editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -186,10 +182,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Database/ForecastDatabase.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Weather_Feature/WeatherFeatureComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/NetworkFragment/NetworkFragmentPresenter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/forecast_recent_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/weather_mainpage_frame.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/AppComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Weather_Feature/WeatherFeatureModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/BaseContract.kt" />
@@ -203,7 +197,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Predicitions/Predictions.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/search_results_frame.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/forecast_detail_frame.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentContract.kt" />
@@ -222,6 +215,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Constants.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Network/ForecastService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/RecentSearchesAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/forecast_recent_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/weather_mainpage_frame.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/search_results_frame.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/forecast_search_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt" />
       </list>
@@ -285,6 +281,13 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Weather_App" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="DI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -301,6 +304,23 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Weather_App" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="Objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Weather_App" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="Objects" type="462c0819:PsiDirectoryNode" />
+              <item name="Main_Elements" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Weather_App" type="1abcf292:AndroidViewProjectNode" />
@@ -485,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567022068694</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Network call is working now, inflating the recent searches on the homeview, aswell as search being carried out using location data from autocomplete. The correct weather information is being displayed on the WeatherSearch fragments Recyclerview.">
+      <created>1567024658553</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567024658553</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -493,7 +520,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23975721" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23975721" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -503,14 +530,14 @@
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="1" />
-      <window_info anchor="bottom" id="Logcat" order="2" sideWeight="0.7336874" visible="true" weight="0.05464481" />
+      <window_info anchor="bottom" id="Logcat" order="2" sideWeight="0.7336874" weight="0.05464481" />
       <window_info anchor="bottom" id="TODO" order="3" />
       <window_info anchor="bottom" id="Android Profiler" order="4" />
       <window_info anchor="bottom" id="Debug" order="5" />
       <window_info anchor="bottom" id="Terminal" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.2663126" side_tool="true" weight="0.91862565" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.7344461" weight="0.89617485" />
+      <window_info active="true" anchor="bottom" id="Build" order="9" sideWeight="0.7344461" visible="true" weight="0.09107468" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49620637" weight="0.76666665" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="1" />
@@ -529,16 +556,10 @@
     <MESSAGE value="Fixed onClicklistener for search results adapter. It is meant to pass the adapterPosition( which is same as the day index of list of days held in Forecast). This Integer will be passed in a bundle via an instantiation method to create the detail fragment." />
     <MESSAGE value="Added utility method for building the correct Url, using the location information from the gmaps prediction. Need to pass this url to retrofit to return the correct forecast for the location." />
     <MESSAGE value="Changed base url for retrofit , updated the service interface to have the correct url formatting for searching for location." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed base url for retrofit , updated the service interface to have the correct url formatting for searching for location." />
+    <MESSAGE value="Network call is working now, inflating the recent searches on the homeview, aswell as search being carried out using location data from autocomplete. The correct weather information is being displayed on the WeatherSearch fragments Recyclerview." />
+    <option name="LAST_COMMIT_MESSAGE" value="Network call is working now, inflating the recent searches on the homeview, aswell as search being carried out using location data from autocomplete. The correct weather information is being displayed on the WeatherSearch fragments Recyclerview." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Composer/ComposerComponent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Composer/ComposerModule.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -596,13 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="32" selection-start-line="26" selection-start-column="6" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Database/ForecastOpp.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -669,18 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/weather_mainpage_frame.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_detail_item.xml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
@@ -711,13 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Main_Elements/Forecast.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-183">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -805,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/NetworkModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3">
@@ -853,19 +841,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/NetworkModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1081">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/RecentSearchesAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_recent_item.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state relative-caret-position="483">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/weather_mainpage_frame.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Main_Elements/Forecast.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Database/ForecastDatabase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Database/ForecastOpp.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_results_frame.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="37" selection-end-column="47" />
+        <state relative-caret-position="805">
+          <caret line="50" column="12" selection-start-line="49" selection-start-column="44" selection-end-line="57" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -877,17 +912,14 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/RecentSearchesAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1011">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+        <state relative-caret-position="82">
+          <caret line="95" column="31" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+          <folding>
+            <element signature="e#2905#2968#0" expanded="true" />
+            <element signature="e#3067#3181#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

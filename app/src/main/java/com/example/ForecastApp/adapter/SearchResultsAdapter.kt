@@ -1,5 +1,6 @@
 package com.example.ForecastApp.adapter
 
+import android.annotation.SuppressLint
 import android.content.res.Resources
 import android.util.Log
 import android.view.LayoutInflater
@@ -63,8 +64,8 @@ class SearchResultsAdapter(private val clickListener: OnItemClickListener) : Rec
 
     class ForecastViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        @BindView(R.id.search_results_card)
-        lateinit var cardView: CardView
+        @BindView(R.id.s_day)
+        lateinit var dayAndTime: TextView
         @BindView(R.id.r_condition)
         lateinit var condition: TextView
         @BindView(R.id.s_clouds)
@@ -83,13 +84,16 @@ class SearchResultsAdapter(private val clickListener: OnItemClickListener) : Rec
             resources = itemView.context.resources
         }
 
+        @SuppressLint("SetTextI18n")
         fun bind(day: Day) {
             Picasso.get().load(Constants.ICON_BASE_URL + (day.weather?.get(0)?.icon) + Constants.ICON_EXTENSION)
                     .into(weatherIcon)
-           // dayAndTime.text = Utils.getDateForLocaleFromUtc(day.dateAndTime)
+            dayAndTime.text = Utils.getDateForLocaleFromUtc(day.dateAndTime)
             condition.text = day.weather?.get(0)?.description?.toUpperCase()
             clouds.text = resources.getString(R.string.cloud_percentage, day.clouds?.all)
-            temparature.text = Utils.getCelsiusFromKelvin(day.main?.temp)
+            val tempMin = Utils.getCelsiusFromKelvin(day.main?.tempMin)
+            val tempMax = Utils.getCelsiusFromKelvin(day.main?.tempMax)
+            temparature.text = "$tempMin - $tempMax"
             wind.text = resources.getString(R.string.wind_speed,
                     Utils.roundDoubleToTwoDecimalPoints(day.wind?.speed))
 

@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    app:cardBackgroundColor="#AACDD5"
+    android:layout_height="90dp"
+    app:cardBackgroundColor="#D7D7DA"
     app:cardCornerRadius="15dp"
     app:cardUseCompatPadding="true"
     app:contentPadding="9dp">
@@ -12,14 +12,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#A9CCD4">
+        android:background="#D6D6D9">
 
         <TextView
             android:id="@+id/r_location"
             android:layout_width="223dp"
             android:layout_height="73dp"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="56dp"
             android:textSize="30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

@@ -17,6 +17,17 @@
         android:orientation="vertical">
 
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="8dp"
+            android:text="Recent Searches "
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchCard" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/searchCard"
             android:layout_width="match_parent"
@@ -70,6 +81,7 @@
             android:id="@+id/mainpage_results"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="43dp"
             android:layout_marginBottom="8dp"
             android:animateLayoutChanges="true"
             app:layout_constraintBottom_toBottomOf="parent"
