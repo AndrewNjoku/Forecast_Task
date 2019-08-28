@@ -61,7 +61,7 @@ class SearchResultsFragment : Fragment(), SearchResultsFragmentContract.View{
         forecastAdapter= SearchResultsAdapter(activityContext as HomeActivity,location)
             searchresults.layoutManager = LinearLayoutManager(activityContext)
             searchresults.adapter = forecastAdapter
-
+        presenter.attach(activityContext,this)
         //retrieve the location of the city thats passed in the bundle wehen we created this fragment
         presenter.showSearchResults(location)
 
@@ -69,17 +69,14 @@ class SearchResultsFragment : Fragment(), SearchResultsFragmentContract.View{
 
     }
 
-
     override fun injectDependencies() {
-
        App.instance.component.plus(WeatherFeatureModule()).inject(this)
-
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         this.activityContext=context
-        presenter.attach(context,this)
+
 
     }
 

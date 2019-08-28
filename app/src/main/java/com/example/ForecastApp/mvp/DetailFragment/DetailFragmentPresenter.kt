@@ -4,8 +4,7 @@ import android.content.Context
 import com.example.ForecastApp.mvp.BaseContract
 import com.example.minimoneybox.model.ApplicationModelContract
 
-class DetailFragmentPresenter(private val ModelInteractor: ApplicationModelContract) : DetailFragmentContract.Presenter {
-
+class DetailFragmentPresenter(private val modelInteractor: ApplicationModelContract) : DetailFragmentContract.Presenter {
 
     lateinit var activityContext: Context
     lateinit var fragView: DetailFragmentContract.View
@@ -15,6 +14,13 @@ class DetailFragmentPresenter(private val ModelInteractor: ApplicationModelContr
         this.fragView=fragView
 
     }
+    override fun getDayDetails(location: String, day: String) {
+        modelInteractor.getForecastDayDetails()
+
+
+    }
+
+
 
     override fun detatchView() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.

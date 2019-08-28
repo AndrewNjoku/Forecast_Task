@@ -36,6 +36,7 @@ class MainScreenFragmentPresenter(private val myModelInteractor: ApplicationMode
     lateinit var activityContext: Context
 
     override fun setSelectedLocation(location: String) {
+
         checkIfListenerAttached()
 
         mListener?.onLocationSelected(location)

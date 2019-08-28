@@ -1,7 +1,6 @@
 package com.example.ForecastApp.Fragments
 
 import android.content.Context
-import android.gesture.Prediction
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -24,6 +23,7 @@ import com.example.ForecastApp.adapter.RecentSearchesAdapter
 import com.example.ForecastApp.adapter.SearchAutoCompleteAdapter
 import com.example.ForecastApp.application.App
 import com.example.ForecastApp.model.Objects.Main_Elements.Forecast
+import com.example.ForecastApp.model.Objects.Predicitions.Prediction
 import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
 import com.example.ForecastApp.mvp.MainScreenFragment.MainScreenFragmentContract
 import com.example.ForecastApp.widget.DelayAutoCompleteTextView
@@ -38,7 +38,7 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
     @Inject
     lateinit var presenter: MainScreenFragmentContract.Presenter
 
-    private val THRESHOLD = 5 //minimum chars before search
+    private val THRESHOLD = 3 //minimum chars before search
 
     private var unbinder: Unbinder? = null
 
@@ -122,7 +122,9 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
             parent, view, position, id ->
             val p = parent.getItemAtPosition(position) as Prediction
 
-            presenter.setSelectedLocation(p.name.toString())
+            Log.e("Prediction", p.toString())
+
+           presenter.setSelectedLocation(p.toString())
 
             //presenter.showSearchResults(p.name.toString())
             //  presenter.setSelectedLocation(p.toString())

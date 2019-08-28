@@ -29,4 +29,5 @@ interface ApplicationModelContract {
     fun handleResultDetail(days: List<Day>)
     fun getForecastSearch(isOnline: Boolean, city: String, view: SearchResultsFragmentContract.View)
     fun getRecentForecasts(view: MainScreenFragmentContract.View)
+    fun getForecastDayDetails()
 }

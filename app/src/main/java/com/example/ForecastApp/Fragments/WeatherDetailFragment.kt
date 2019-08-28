@@ -37,6 +37,9 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
 
     private lateinit var activityContext: Context
 
+    lateinit var location : String
+    lateinit var day: String
+
     var binder: Unbinder? = null
 
 
@@ -54,13 +57,16 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
         injectDependencies()
         val view =inflater.inflate(R.layout.forecast_detail_frame,container,false)
         binder = ButterKnife.bind(this,view)
+        location = arguments?.getString("Location").toString()
+        day = arguments?.getString("Day").toString()
+
             recyclerView.layoutManager = LinearLayoutManager(activityContext)
             recyclerView.adapter = forecastAdapter
 
         //TODO when this fragment is created, will pass in bundle the location and day for the weather search,
         //i simply need to use this information to make a room uery and return the information for that partcular day and display it
 
-       // presenter.getForecast(Utils.isOnline(activityContext))
+        presenter.getForecast(Utils.isOnline(activityContext))
 
         return view
 
@@ -117,9 +123,15 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
         super.onStop()
       //  presenter.stop()
     }
-    fun newInstance(): WeatherDetailFragment{
+    fun newInstance(location: String, day: String): WeatherDetailFragment{
+        val detailFragment = WeatherDetailFragment()
+        val bundle = Bundle().apply {
+            putString("Location", location)
+            putString("Day",day)
+        }
+       detailFragment.arguments = bundle
 
-        return WeatherDetailFragment()
+        return detailFragment
     }
 }
 

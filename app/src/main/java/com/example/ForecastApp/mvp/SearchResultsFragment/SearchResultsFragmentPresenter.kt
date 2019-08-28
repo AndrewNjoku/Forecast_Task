@@ -21,12 +21,7 @@ class SearchResultsFragmentPresenter(private val myModelInteractor: ApplicationM
 
     override fun showSearchResults(location: String ){
 
-        val viewfromcontext = activityContext as MainActivityContract.View
-
-       // viewfromcontext.showSearchResultsFragment(location)
-
         myModelInteractor.getForecastShowInSearchResults(Utils.isOnline(activityContext),location, myView)
-
         //TODO display the search results for the location
 
     }
