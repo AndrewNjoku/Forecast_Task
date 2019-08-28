@@ -3,7 +3,7 @@ package com.example.ForecastApp.DataBank
 object Constants {
 
 
-    val OPEN_WEATHER_API = "http://api.openweathermap.org/data/2.5"
+    val OPEN_WEATHER_API = "http://api.openweathermap.org/data/2.5/"
     val OPEN_WEATHER_API_MODE = "&mode=json"
     val OPEN_WEATHER_COMMON_PARAMS = OPEN_WEATHER_API_MODE
     val CONNECTION_TIMEOUT: Long = 60

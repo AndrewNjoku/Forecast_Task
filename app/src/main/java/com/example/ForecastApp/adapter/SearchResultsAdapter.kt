@@ -65,11 +65,11 @@ class SearchResultsAdapter(private val clickListener: OnItemClickListener) : Rec
 
         @BindView(R.id.search_results_card)
         lateinit var cardView: CardView
+        @BindView(R.id.r_condition)
         lateinit var condition: TextView
         @BindView(R.id.s_clouds)
         lateinit var clouds: TextView
         @BindView(R.id.s_maxmintemp)
-        @Nullable
         lateinit var temparature: TextView
         @BindView(R.id.s_wind)
         lateinit var wind: TextView

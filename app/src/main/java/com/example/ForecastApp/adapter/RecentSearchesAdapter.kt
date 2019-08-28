@@ -8,11 +8,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.example.ForecastApp.DataBank.Constants
 import com.example.ForecastApp.R
-import com.example.ForecastApp.DataBank.Utils
-import com.squareup.picasso.Picasso
 import java.util.ArrayList
 import java.util.Objects
 import butterknife.BindView

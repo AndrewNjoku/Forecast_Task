@@ -10,7 +10,7 @@ import retrofit2.http.Query
 
 interface ForecastService {
 
-    @GET("/forecast")
+    @GET("forecast")
     fun getFiveDayForecast(@Query("q") location: String, @Query("APPID") appId: String): Observable<Forecast>
 
 }
