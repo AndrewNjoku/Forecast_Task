@@ -1,6 +1,8 @@
 package com.example.minimoneybox.model
 
 import com.example.ForecastApp.DataBank.Constants
+import com.example.ForecastApp.DataBank.Constants.FORECAST_BY_NAME_URL
+import com.example.ForecastApp.DataBank.Utils.buildUrl
 import com.example.ForecastApp.Database.ForecastDatabase
 import com.example.ForecastApp.Fragments.WeatherDetailFragment
 import com.example.ForecastApp.Network.ForecastService
@@ -18,10 +20,6 @@ class ApplicationModel (private val myService: ForecastService
                         , private val myDatabase: ForecastDatabase
                         ): ApplicationModelContract {
 
-
-    override fun getForecastShowInSearchResults(online: Boolean, city: String, myView: SearchResultsFragmentContract.View) {
-
-    }
 
 
     //weather detail view
@@ -68,7 +66,12 @@ class ApplicationModel (private val myService: ForecastService
     //and the result will be stored in the database
     override fun getForecastSearch(isOnline: Boolean, location:String, view : SearchResultsFragmentContract.View) {
         this.myResultsView=view
-        val observable = if (isOnline) forecastFromAPI(location) else forecastFromDb(location)
+
+        //get weather for url by name
+
+        val url = buildUrl(FORECAST_BY_NAME_URL, location)
+
+        val observable = if (isOnline) forecastFromAPI(url) else forecastFromDb(location)
         compositeDisposable.add(observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -95,7 +98,7 @@ class ApplicationModel (private val myService: ForecastService
 
     }
 
-    override fun getForecastDayDetails(location:String, day: String, view: DetailFragmentContract.View) {
+    override fun getForecastDayDetails(location:String, day: Int, view: DetailFragmentContract.View) {
 
         this.myDetailView=view
 
@@ -108,7 +111,7 @@ class ApplicationModel (private val myService: ForecastService
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map { forecast -> forecast.days }
-                .map { days -> days.get(day) }
+                .map { days -> days[day] }
                 //show progress once subscribed
                 .doOnSubscribe { myRecentView.showProgress(true) }
                 .doOnTerminate { myRecentView.showProgress(false) }
@@ -157,13 +160,10 @@ class ApplicationModel (private val myService: ForecastService
     }
 
 
-    override fun handleResultDetail(days: List<Day>) {
-        if (days.isEmpty()) {
-            myWeatherView.showTryAgain(true)
-        } else {
-            myWeatherView.showTryAgain(false)
-           // myWeatherView.showForecast(days)
-        }
+    override fun handleResultDetail(day:Day) {
+
+           myDetailView.showForecast(day)
+
     }
 
     override fun addToDb(forecast: Forecast) {

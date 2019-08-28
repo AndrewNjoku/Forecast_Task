@@ -2,6 +2,7 @@ package com.example.ForecastApp.mvp.MainScreenFragment
 
 import android.app.PendingIntent.getActivity
 import android.content.Context
+import android.util.Log
 import com.example.ForecastApp.Activities.HomeActivity
 import com.example.ForecastApp.Fragments.OnLocationSelectedListener
 import com.example.ForecastApp.model.Objects.Main_Elements.Forecast
@@ -20,7 +21,6 @@ class MainScreenFragmentPresenter(private val myModelInteractor: ApplicationMode
         this.activityContext = context
         this.fragView=fragView
 
-
             myModelInteractor.getRecentForecasts(fragView)
 
     }
@@ -37,6 +37,8 @@ class MainScreenFragmentPresenter(private val myModelInteractor: ApplicationMode
 
     override fun setSelectedLocation(location: String) {
 
+        Log.e("presenter_main","insidesetlocation")
+
         checkIfListenerAttached()
 
         mListener?.onLocationSelected(location)
@@ -47,7 +49,7 @@ class MainScreenFragmentPresenter(private val myModelInteractor: ApplicationMode
             try {
                 mListener = activityContext as HomeActivity
             } catch (e: ClassCastException) {
-                throw ClassCastException("$activityContext must implement OnLocationSelectedListener")
+                throw ClassCastException("${activityContext}must implement OnLocationSelectedListener")
             }
         }
     }

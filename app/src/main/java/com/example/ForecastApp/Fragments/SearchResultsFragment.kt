@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 
 import android.view.LayoutInflater
 import android.view.View
@@ -27,7 +28,8 @@ import javax.inject.Inject
 
 
 
-class SearchResultsFragment : Fragment(), SearchResultsFragmentContract.View{
+class SearchResultsFragment : Fragment(),SearchResultsAdapter.OnItemClickListener,SearchResultsFragmentContract.View{
+
 
 
     lateinit var forecastAdapter: SearchResultsAdapter
@@ -58,7 +60,7 @@ class SearchResultsFragment : Fragment(), SearchResultsFragmentContract.View{
         binder = ButterKnife.bind(this,view)
 
         location = arguments?.getString("Location").toString()
-        forecastAdapter= SearchResultsAdapter(activityContext as HomeActivity)
+        forecastAdapter= SearchResultsAdapter(this)
             searchresults.layoutManager = LinearLayoutManager(activityContext)
             searchresults.adapter = forecastAdapter
         presenter.attach(activityContext,this)
@@ -68,17 +70,21 @@ class SearchResultsFragment : Fragment(), SearchResultsFragmentContract.View{
         return view
 
     }
-
     override fun injectDependencies() {
        App.instance.component.plus(WeatherFeatureModule()).inject(this)
     }
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         this.activityContext=context
 
+    }
+    override fun onItemClick(v: View, position: Int) {
+        val a = activityContext as MainActivityContract.View
+        a.showDetailsFragment(location,position)
+
 
     }
+
 
     override fun showSearchResults(days: List<Day>) {
         forecastAdapter.setData(days)
@@ -125,6 +131,8 @@ class SearchResultsFragment : Fragment(), SearchResultsFragmentContract.View{
     //this will allow us to initiate the search based on the location and display in the fragments recyclerview
 
     fun newInstance(location:String): SearchResultsFragment{
+
+        Log.e("SearchResults","creating fragment")
 
         val searchResultsFragment = SearchResultsFragment()
         val bundle = Bundle().apply {

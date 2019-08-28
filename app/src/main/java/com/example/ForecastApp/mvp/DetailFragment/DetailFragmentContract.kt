@@ -23,6 +23,6 @@ interface DetailFragmentContract {
 
 
         fun attach(context: Context, fragView: View)
-        fun getDayDetails(location: String, day: String)
+        fun getDayDetails(location: String, day: Int)
     }
 }

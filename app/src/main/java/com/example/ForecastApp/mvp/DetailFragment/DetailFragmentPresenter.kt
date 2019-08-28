@@ -1,7 +1,6 @@
 package com.example.ForecastApp.mvp.MainScreenFragment
 
 import android.content.Context
-import com.example.ForecastApp.mvp.BaseContract
 import com.example.minimoneybox.model.ApplicationModelContract
 
 class DetailFragmentPresenter(private val modelInteractor: ApplicationModelContract) : DetailFragmentContract.Presenter {
@@ -14,8 +13,8 @@ class DetailFragmentPresenter(private val modelInteractor: ApplicationModelContr
         this.fragView=fragView
 
     }
-    override fun getDayDetails(location: String, day: String) {
-        modelInteractor.getForecastDayDetails()
+    override fun getDayDetails(location: String, day: Int) {
+        modelInteractor.getForecastDayDetails(location,day,fragView)
 
 
     }

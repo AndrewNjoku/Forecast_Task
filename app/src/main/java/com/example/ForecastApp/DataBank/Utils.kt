@@ -2,6 +2,8 @@ package com.example.ForecastApp.DataBank
 
 import android.content.Context
 import android.net.ConnectivityManager
+import com.example.ForecastApp.R
+import com.example.ForecastApp.application.App
 
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
@@ -9,6 +11,7 @@ import org.joda.time.format.DateTimeFormat
 import java.lang.NumberFormatException
 
 import java.math.RoundingMode
+import java.net.URLEncoder
 import java.text.DecimalFormat
 
 object Utils {
@@ -37,33 +40,20 @@ object Utils {
         return decimalFormat.format(value)
     }
 
-    //check if the toDOuble check passes to see if t is co-ordinates
-   fun isGpsCoordinates(location: String): Boolean {
-        try {
-            val split = location.replace("Search Lat: ", "").replace("Lon: ", "").split(",")
-            if (split.size== 2) {
-               val dbl = split[0].trim().toDouble()
-                return true;
-            }
-            return false
-        } catch (nfe: NumberFormatException) {
-            return false
+
+    fun buildUrl(urlTemplate: String, location: String): String {
+        return try {
+            val builder = StringBuilder(String.format(urlTemplate, URLEncoder.encode(location, "UTF-8")))
+            addUnitParam(builder)
+            builder.toString()
+        } catch (e: Exception) {
+            Constants.FORECAST_BY_NAME_URL
         }
+
     }
-    //replace string with empty spaces to convert to the right format for long and lat
-    fun convertToGpsCoordinates(location: String): Array<String>? {
-        try {
-            //replace the string
-            val split = location.replace("Search Lat: ", "").replace("Lon: ", "").split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-            if (split.size == 2) {
-                split[0] = split[0].trim { it <= ' ' }
-                split[1] = split[1].trim { it <= ' ' }
-                return split
-            }
-            return null
-        } catch (nfe: NumberFormatException) {
-            return null
-        }
+    private fun addUnitParam(builder: StringBuilder) {
+        builder.append(Constants.OPEN_WEATHER_API_KEY).append(App.instance.getString(R.string.openweather_api_key))
+            builder.append(Constants.OPEN_WEATHER_API_UNITS).append("metric")
 
     }
 

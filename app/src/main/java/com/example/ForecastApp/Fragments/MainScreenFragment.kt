@@ -34,7 +34,6 @@ import javax.inject.Inject
 
 class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
 
-
     @Inject
     lateinit var presenter: MainScreenFragmentContract.Presenter
 

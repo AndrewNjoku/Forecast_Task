@@ -1,6 +1,7 @@
 package com.example.ForecastApp.mvp.MainScreenFragment
 
 import android.content.Context
+import android.util.Log
 import com.example.ForecastApp.DataBank.Utils
 import com.example.minimoneybox.model.ApplicationModelContract
 
@@ -21,8 +22,10 @@ class SearchResultsFragmentPresenter(private val myModelInteractor: ApplicationM
 
     override fun showSearchResults(location: String ){
 
-        myModelInteractor.getForecastShowInSearchResults(Utils.isOnline(activityContext),location, myView)
-        //TODO display the search results for the location
+        Log.e("SearchPresenter","Showing search results")
+
+        myModelInteractor.getForecastSearch(Utils.isOnline(activityContext),location, myView)
+
 
     }
 

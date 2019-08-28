@@ -18,14 +18,10 @@ import com.example.ForecastApp.model.Objects.Main_Elements.Day
 import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
 import javax.inject.Inject
 
-class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, SearchResultsAdapter.OnItemClickListener, MainActivityContract.View {
-
-
-
-    override fun onItemClick(v: View, position: Int) {
+class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, MainActivityContract.View {
+    override fun showDetailFragment(dayPos: Int) {
 
     }
-
 
     lateinit var activityComponent: ComposerComponent
 
@@ -34,6 +30,7 @@ class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, SearchResu
     lateinit var presenter: MainActivityContract.Presenter
 
     override fun onLocationSelected(location: String) {
+        Log.e("Activity", "inside location selected listener")
        showSearchResultsFragment(location)
     }
 
@@ -77,10 +74,13 @@ class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, SearchResu
 
     }
 
-    override fun showDetailFragment(dayPos: Int) {
-        supportFragmentManager.beginTransaction()
-                .replace(R.id.frame, WeatherDetailFragment().newInstance() ,"detail")
-                .commit()
+
+   override fun showDetailsFragment(location: String,dayPos:Int){
+       supportFragmentManager.beginTransaction()
+               .replace(R.id.frame, WeatherDetailFragment().newInstance(location,dayPos) ,"detail")
+               .commit()
+
+
     }
 
 }
