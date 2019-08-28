@@ -1,10 +1,7 @@
 package com.example.minimoneybox.model
 
 import com.example.ForecastApp.DataBank.Constants
-import com.example.ForecastApp.DataBank.Constants.FORECAST_BY_NAME_URL
-import com.example.ForecastApp.DataBank.Utils.buildUrl
 import com.example.ForecastApp.Database.ForecastDatabase
-import com.example.ForecastApp.Fragments.WeatherDetailFragment
 import com.example.ForecastApp.Network.ForecastService
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
 import com.example.ForecastApp.model.Objects.Main_Elements.Forecast
@@ -69,9 +66,7 @@ class ApplicationModel (private val myService: ForecastService
 
         //get weather for url by name
 
-        val url = buildUrl(FORECAST_BY_NAME_URL, location)
-
-        val observable = if (isOnline) forecastFromAPI(url) else forecastFromDb(location)
+        val observable = if (isOnline) forecastFromAPI(location) else forecastFromDb(location)
         compositeDisposable.add(observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

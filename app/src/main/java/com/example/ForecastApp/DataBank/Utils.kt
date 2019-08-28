@@ -41,20 +41,8 @@ object Utils {
     }
 
 
-    fun buildUrl(urlTemplate: String, location: String): String {
-        return try {
-            val builder = StringBuilder(String.format(urlTemplate, URLEncoder.encode(location, "UTF-8")))
-            addUnitParam(builder)
-            builder.toString()
-        } catch (e: Exception) {
-            Constants.FORECAST_BY_NAME_URL
-        }
 
-    }
-    private fun addUnitParam(builder: StringBuilder) {
-        builder.append(Constants.OPEN_WEATHER_API_KEY).append(App.instance.getString(R.string.openweather_api_key))
-            builder.append(Constants.OPEN_WEATHER_API_UNITS).append("metric")
 
     }
 
-}
+

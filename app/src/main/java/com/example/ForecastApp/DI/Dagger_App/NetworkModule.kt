@@ -3,6 +3,7 @@ package com.example.ForecastApp.DI.Dagger_App
 import android.content.Context
 import com.example.ForecastApp.DataBank.Constants.BASE_URL
 import com.example.ForecastApp.DataBank.Constants.CONNECTION_TIMEOUT
+import com.example.ForecastApp.DataBank.Constants.OPEN_WEATHER_API
 import com.example.ForecastApp.DataBank.Constants.READ_TIMEOUT
 
 import com.example.ForecastApp.Network.ForecastService
@@ -50,7 +51,7 @@ class NetworkModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(OPEN_WEATHER_API)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
