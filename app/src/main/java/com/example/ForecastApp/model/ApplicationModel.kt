@@ -108,6 +108,7 @@ class ApplicationModel (private val myService: ForecastService
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map { forecast -> forecast.days }
+                .map { days -> days.get(day) }
                 //show progress once subscribed
                 .doOnSubscribe { myRecentView.showProgress(true) }
                 .doOnTerminate { myRecentView.showProgress(false) }

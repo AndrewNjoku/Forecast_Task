@@ -10,7 +10,6 @@ interface MainActivityContract {
 
         fun showError(throwable: Throwable)
         fun showMainPageFragment()
-        fun showDetailFragment()
         fun showSearchResultsFragment(location: String)
 
 

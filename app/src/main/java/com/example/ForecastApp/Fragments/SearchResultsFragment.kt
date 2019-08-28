@@ -58,7 +58,7 @@ class SearchResultsFragment : Fragment(), SearchResultsFragmentContract.View{
         binder = ButterKnife.bind(this,view)
 
         location = arguments?.getString("Location").toString()
-        forecastAdapter= SearchResultsAdapter(activityContext as HomeActivity,location)
+        forecastAdapter= SearchResultsAdapter(activityContext as HomeActivity)
             searchresults.layoutManager = LinearLayoutManager(activityContext)
             searchresults.adapter = forecastAdapter
         presenter.attach(activityContext,this)

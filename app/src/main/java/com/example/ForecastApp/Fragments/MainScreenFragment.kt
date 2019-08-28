@@ -164,4 +164,5 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
 interface OnLocationSelectedListener {
     fun onLocationSelected(location: String)
     fun onLocationSelected(locId: Long)
+    fun showDetailFragment(dayPos: Int)
 }

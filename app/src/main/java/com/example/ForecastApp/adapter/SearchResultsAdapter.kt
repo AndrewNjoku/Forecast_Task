@@ -21,14 +21,14 @@ import butterknife.ButterKnife
 import androidx.cardview.widget.CardView
 
 
-class SearchResultsAdapter(private var listener: OnItemClickListener, private val location: String) : RecyclerView.Adapter<SearchResultsAdapter.ForecastViewHolder>() {
+class SearchResultsAdapter(private val clickListener: OnItemClickListener) : RecyclerView.Adapter<SearchResultsAdapter.ForecastViewHolder>() {
 
 
     private val daysinfo: MutableList<Day>
 
-    interface OnItemClickListener : View.OnClickListener {
-        override fun onClick(p0: View?)
-        fun onItemClick(item: Day, location: String)
+
+    interface OnItemClickListener {
+        fun onItemClick(v: View, position: Int)
     }
 
     init {
@@ -45,11 +45,16 @@ class SearchResultsAdapter(private var listener: OnItemClickListener, private va
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ForecastViewHolder {
         val rootView = LayoutInflater.from(parent.context).inflate(R.layout.forecast_search_item,
                 parent, false)
-        return ForecastViewHolder(rootView)
+        val viewholder = ForecastViewHolder(rootView)
+            rootView.setOnClickListener {
+            clickListener.onItemClick(it,viewholder.adapterPosition)
+
+        }
+        return viewholder
     }
 
     override fun onBindViewHolder(holder: ForecastViewHolder, position: Int) {
-        holder.bind(daysinfo[position],listener)
+        holder.bind(daysinfo[position])
     }
 
     override fun getItemCount(): Int {
@@ -78,7 +83,7 @@ class SearchResultsAdapter(private var listener: OnItemClickListener, private va
             resources = itemView.context.resources
         }
 
-        fun bind(day: Day,listener:OnItemClickListener) {
+        fun bind(day: Day) {
             Picasso.get().load(Constants.ICON_BASE_URL + (day.weather?.get(0)?.icon) + Constants.ICON_EXTENSION)
                     .into(weatherIcon)
            // dayAndTime.text = Utils.getDateForLocaleFromUtc(day.dateAndTime)
@@ -87,7 +92,7 @@ class SearchResultsAdapter(private var listener: OnItemClickListener, private va
             temparature.text = Utils.getCelsiusFromKelvin(day.main?.temp)
             wind.text = resources.getString(R.string.wind_speed,
                     Utils.roundDoubleToTwoDecimalPoints(day.wind?.speed))
-            cardView.setOnClickListener(listener)
+
         }
 
 

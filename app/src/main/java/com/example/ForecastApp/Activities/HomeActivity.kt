@@ -19,13 +19,11 @@ import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
 import javax.inject.Inject
 
 class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, SearchResultsAdapter.OnItemClickListener, MainActivityContract.View {
-    override fun onClick(p0: View?) {
-      Log.e("home", "item clicked")
-    }
 
-    override fun onItemClick(item: Day, location: String) {
 
-        Log.e("home", "item clicked")
+
+    override fun onItemClick(v: View, position: Int) {
+
     }
 
 
@@ -79,7 +77,7 @@ class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, SearchResu
 
     }
 
-    override fun showDetailFragment() {
+    override fun showDetailFragment(dayPos: Int) {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.frame, WeatherDetailFragment().newInstance() ,"detail")
                 .commit()
