@@ -136,7 +136,7 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
     }
 
     override fun showError(error: Throwable?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun showNoRecentSearches() {
@@ -164,4 +164,5 @@ interface OnLocationSelectedListener {
     fun onLocationSelected(location: String)
     fun onLocationSelected(locId: Long)
     fun showDetailFragment(dayPos: Int)
+    fun showDetailsFragment(location: String)
 }

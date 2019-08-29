@@ -5,10 +5,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import butterknife.BindView
@@ -43,7 +45,8 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
 
     var binder: Unbinder? = null
 
-
+    @BindView(R.id.search_button)
+    lateinit var searchb: ImageView
     @BindView(R.id.detail_results)
     lateinit var recyclerView: RecyclerView
     @BindView(R.id.detail_progress)
@@ -56,24 +59,27 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
         savedInstanceState: Bundle?
     ): View? {
         injectDependencies()
-        val view =inflater.inflate(R.layout.forecast_detail_frame,container,false)
+        val view =inflater.inflate(R.layout.forecast_detail_f,container,false)
         binder = ButterKnife.bind(this,view)
         location = arguments?.getString("Location").toString()
-        day = arguments?.getInt("Day")!!
-
+        presenter.attach(activityContext,this)
             recyclerView.layoutManager = LinearLayoutManager(activityContext)
             recyclerView.adapter = forecastAdapter
+        presenter.getDayDetails(location)
+        val b = activityContext as MainActivityContract.View
+        searchb.setOnClickListener {
+            Log.e("sclick","button clicked ")
+            b.showSearchResultsFragment(location)
 
-
-        presenter.getDayDetails(location,day)
+        }
         return view
 
     }
 
 
-    override fun showForecast(day: Day) {
-        //TODO
-      // forecastAdapter.setData(day)
+    override fun showForecast(days: List<Day>) {
+
+      forecastAdapter.setData(days)
     }
 
     override fun injectDependencies() {
@@ -85,7 +91,7 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         activityContext=context
-        presenter.attach(context,this)
+
     }
 
     override fun showError(throwable: Throwable) {
@@ -122,11 +128,10 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
         super.onStop()
       //  presenter.stop()
     }
-    fun newInstance(location: String, dayPos: Int): WeatherDetailFragment{
+    fun newInstance(location: String): WeatherDetailFragment{
         val detailFragment = WeatherDetailFragment()
         val bundle = Bundle().apply {
             putString("Location", location)
-            putInt("Day",dayPos)
         }
        detailFragment.arguments = bundle
 

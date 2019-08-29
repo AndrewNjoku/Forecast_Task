@@ -30,7 +30,8 @@ class RecentSearchesAdapter(private val mContext: Context) : BaseAdapter(){
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             convertView = inflater.inflate(R.layout.forecast_recent_item, p2, false)
         }
-        (convertView!!.findViewById<View>(R.id.r_location) as TextView).text = getItem(p0).city?.name
+        val get= getItem(p0)
+        (convertView!!.findViewById<View>(R.id.r_location) as TextView).text = get.city.name + " " +get.city.country
 
         return convertView
     }

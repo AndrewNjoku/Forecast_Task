@@ -11,7 +11,7 @@ interface MainActivityContract {
         fun showError(throwable: Throwable)
         fun showMainPageFragment()
         fun showSearchResultsFragment(location: String)
-        fun showDetailsFragment(location: String, day: Int)
+        fun showDetailsFragment(location: String)
 
 
     }

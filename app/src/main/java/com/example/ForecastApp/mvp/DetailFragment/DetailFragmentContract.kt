@@ -9,7 +9,7 @@ interface DetailFragmentContract {
 
     interface View : BaseContract.View {
 
-        fun showForecast(day: Day)
+        fun showForecast(days: List<Day>)
         fun showError(throwable: Throwable)
         fun showProgress(shouldShow: Boolean)
         fun showTryAgain(shouldShow: Boolean)
@@ -17,12 +17,13 @@ interface DetailFragmentContract {
 
         }
 
+
     }
 
     interface Presenter : BaseContract.Presenter<View> {
 
 
         fun attach(context: Context, fragView: View)
-        fun getDayDetails(location: String, day: Int)
+        fun getDayDetails(location: String)
     }
 }

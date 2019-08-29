@@ -22,7 +22,7 @@ import butterknife.ButterKnife
 import androidx.cardview.widget.CardView
 
 
-class SearchResultsAdapter(private val clickListener: OnItemClickListener) : RecyclerView.Adapter<SearchResultsAdapter.ForecastViewHolder>() {
+class SearchResultsAdapter() : RecyclerView.Adapter<SearchResultsAdapter.ForecastViewHolder>() {
 
 
     private val daysinfo: MutableList<Day>
@@ -47,10 +47,7 @@ class SearchResultsAdapter(private val clickListener: OnItemClickListener) : Rec
         val rootView = LayoutInflater.from(parent.context).inflate(R.layout.forecast_search_item,
                 parent, false)
         val viewholder = ForecastViewHolder(rootView)
-            rootView.setOnClickListener {
-            clickListener.onItemClick(it,viewholder.adapterPosition)
 
-        }
         return viewholder
     }
 
@@ -63,9 +60,10 @@ class SearchResultsAdapter(private val clickListener: OnItemClickListener) : Rec
     }
 
     class ForecastViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        @Nullable
         @BindView(R.id.s_day)
         lateinit var dayAndTime: TextView
+        @Nullable
         @BindView(R.id.r_condition)
         lateinit var condition: TextView
         @BindView(R.id.s_clouds)
@@ -84,7 +82,6 @@ class SearchResultsAdapter(private val clickListener: OnItemClickListener) : Rec
             resources = itemView.context.resources
         }
 
-        @SuppressLint("SetTextI18n")
         fun bind(day: Day) {
             Picasso.get().load(Constants.ICON_BASE_URL + (day.weather?.get(0)?.icon) + Constants.ICON_EXTENSION)
                     .into(weatherIcon)

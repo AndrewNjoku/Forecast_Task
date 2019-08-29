@@ -15,15 +15,15 @@
         android:background="#A9CCD4">
 
         <TextView
-            android:id="@+id/s_day"
-            android:layout_width="52dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="4dp"
+            android:id="@+id/d_day"
+            android:layout_width="153dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textSize="22dp"
             android:translationX="-21dp"
-            app:layout_constraintStart_toEndOf="@+id/iv_weather_icon"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Time" />
 
@@ -31,60 +31,58 @@
             android:id="@+id/iv_weather_icon"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="188dp"
+            android:layout_marginStart="136dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:translationX="-18dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.46"
             app:srcCompat="@mipmap/ic_launcher_round" />
 
         <TextView
-            android:id="@+id/s_maxmintemp"
+            android:id="@+id/d_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
             android:layout_marginTop="20dp"
             android:textColor="#4CAF50"
-            android:textSize="50dp"
+            android:textSize="30dp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/iv_weather_icon"
-            app:layout_constraintTop_toBottomOf="@+id/s_day"
+            app:layout_constraintTop_toBottomOf="@+id/d_day"
             tools:text="30" />
 
         <TextView
-            android:id="@+id/s_wind"
+            android:id="@+id/d_wind"
             android:layout_width="wrap_content"
             android:layout_height="22dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/r_location"
+            app:layout_constraintTop_toBottomOf="@+id/d_clouds"
             tools:text="Wind" />
 
         <TextView
-            android:id="@+id/r_location"
+            android:id="@+id/d_location"
             android:layout_width="wrap_content"
             android:layout_height="22dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="60dp"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Condition" />
 
         <TextView
-            android:id="@+id/s_clouds"
+            android:id="@+id/d_clouds"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/s_wind"
+            app:layout_constraintTop_toBottomOf="@+id/d_location"
             tools:text="Clouds" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,6 +48,9 @@ class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, MainActivi
         showMainPageFragment()
 
     }
+    override fun onBackPressed() {
+      showMainPageFragment()
+    }
 
     override fun injectDependencies() {
         activityComponent= DaggerComposerComponent.builder()
@@ -75,9 +78,9 @@ class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, MainActivi
     }
 
 
-   override fun showDetailsFragment(location: String,dayPos:Int){
+   override fun showDetailsFragment(location: String){
        supportFragmentManager.beginTransaction()
-               .replace(R.id.frame, WeatherDetailFragment().newInstance(location,dayPos) ,"detail")
+               .replace(R.id.frame, WeatherDetailFragment().newInstance(location) ,"detail")
                .commit()
 
 

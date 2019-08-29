@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import butterknife.BindView
@@ -28,8 +29,7 @@ import javax.inject.Inject
 
 
 
-class SearchResultsFragment : Fragment(),SearchResultsAdapter.OnItemClickListener,SearchResultsFragmentContract.View{
-
+class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
 
 
     lateinit var forecastAdapter: SearchResultsAdapter
@@ -44,6 +44,8 @@ class SearchResultsFragment : Fragment(),SearchResultsAdapter.OnItemClickListene
 
     lateinit var location : String
 
+    @BindView(R.id.detail_button)
+    lateinit var detailb: ImageView
     @BindView(R.id.search_results)
     lateinit var searchresults: RecyclerView
     @BindView(R.id.search_progress)
@@ -60,12 +62,21 @@ class SearchResultsFragment : Fragment(),SearchResultsAdapter.OnItemClickListene
         binder = ButterKnife.bind(this,view)
 
         location = arguments?.getString("Location").toString()
-        forecastAdapter= SearchResultsAdapter(this)
+        val a =activityContext as HomeActivity
+       val bar = a.supportActionBar
+        bar?.title =location
+        forecastAdapter= SearchResultsAdapter()
             searchresults.layoutManager = LinearLayoutManager(activityContext)
             searchresults.adapter = forecastAdapter
         presenter.attach(activityContext,this)
         //retrieve the location of the city thats passed in the bundle wehen we created this fragment
         presenter.showSearchResults(location)
+         val b = activityContext as MainActivityContract.View
+        detailb.setOnClickListener {
+            Log.e("sclick","button clicked ")
+            b.showDetailsFragment(location)
+
+        }
 
         return view
 
@@ -76,12 +87,6 @@ class SearchResultsFragment : Fragment(),SearchResultsAdapter.OnItemClickListene
     override fun onAttach(context: Context) {
         super.onAttach(context)
         this.activityContext=context
-
-    }
-    override fun onItemClick(v: View, position: Int) {
-        val a = activityContext as MainActivityContract.View
-        a.showDetailsFragment(location,position)
-
 
     }
 
@@ -120,11 +125,6 @@ class SearchResultsFragment : Fragment(),SearchResultsAdapter.OnItemClickListene
     @OnClick(R.id.search_try_again)
     fun onTryAgainClicked() {
         presenter.showSearchResults(location)
-    }
-
-    override fun onStop() {
-        super.onStop()
-      //  presenter.stop()
     }
 
     //here we create a new searchFragment and we are passing the location via a bundle

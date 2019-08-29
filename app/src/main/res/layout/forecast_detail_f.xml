@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A4FFFFFF"
+    android:background="#A4E4E2E2"
     android:orientation="vertical"
     tools:context=".Activities.HomeActivity">
 
@@ -34,8 +34,17 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/detail_results"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_width="327dp"
+            android:layout_height="688dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#7AAFAFAF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.481" />
 
         <TextView
             android:id="@+id/detail_try_again"
@@ -50,6 +59,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_width="63dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#CECDCD"
+            android:clickable="true"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_more" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

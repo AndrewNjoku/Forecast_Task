@@ -2,18 +2,12 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "fd51a217a431d5a7c1f70f6ac1967baf",
+    "identityHash": "655d55447673cc8f40149dedaff85d43",
     "entities": [
       {
         "tableName": "Forecast",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `cod` TEXT, `message` REAL NOT NULL, `cnt` INTEGER NOT NULL, `days` TEXT, `city_id` INTEGER, `name` TEXT, `country` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`cod` TEXT, `message` REAL NOT NULL, `cnt` INTEGER NOT NULL, `days` TEXT, `city_id` INTEGER NOT NULL, `name` TEXT NOT NULL, `country` TEXT NOT NULL, PRIMARY KEY(`city_id`, `name`, `country`))",
         "fields": [
-          {
-            "fieldPath": "id",
-            "columnName": "id",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
           {
             "fieldPath": "cod",
             "columnName": "cod",
@@ -42,34 +36,37 @@
             "fieldPath": "city.id",
             "columnName": "city_id",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "city.name",
             "columnName": "name",
             "affinity": "TEXT",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "city.country",
             "columnName": "country",
             "affinity": "TEXT",
-            "notNull": false
+            "notNull": true
           }
         ],
         "primaryKey": {
           "columnNames": [
-            "id"
+            "city_id",
+            "name",
+            "country"
           ],
-          "autoGenerate": true
+          "autoGenerate": false
         },
         "indices": [],
         "foreignKeys": []
       }
     ],
+    "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"fd51a217a431d5a7c1f70f6ac1967baf\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '655d55447673cc8f40149dedaff85d43')"
     ]
   }
 }

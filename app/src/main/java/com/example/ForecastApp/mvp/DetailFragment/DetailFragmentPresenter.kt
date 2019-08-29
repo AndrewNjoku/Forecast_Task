@@ -13,8 +13,9 @@ class DetailFragmentPresenter(private val modelInteractor: ApplicationModelContr
         this.fragView=fragView
 
     }
-    override fun getDayDetails(location: String, day: Int) {
-        modelInteractor.getForecastDayDetails(location,day,fragView)
+    override fun getDayDetails(location: String) {
+
+        modelInteractor.getForecastDayDetails(location,fragView)
 
 
     }

@@ -48,16 +48,16 @@ class WeatherDetailAdapter : RecyclerView.Adapter<WeatherDetailAdapter.ForecastV
     }
 
     class ForecastViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        @BindView(R.id.s_day)
+        @BindView(R.id.d_day)
         lateinit var dayAndTime: TextView
-    //    @BindView(R.id.tv_condition)
+        @BindView(R.id.d_location)
         lateinit var condition: TextView
-        @BindView(R.id.s_clouds)
+        @BindView(R.id.d_clouds)
         lateinit var clouds: TextView
-     //   @BindView(R.id.d_maxmintemp)
+         @BindView(R.id.d_temp)
         @Nullable
         lateinit var temparature: TextView
-        @BindView(R.id.s_wind)
+        @BindView(R.id.d_wind)
         lateinit var wind: TextView
         @BindView(R.id.iv_weather_icon)
         lateinit var weatherIcon: ImageView

@@ -93,23 +93,24 @@ class ApplicationModel (private val myService: ForecastService
 
     }
 
-    override fun getForecastDayDetails(location:String, day: Int, view: DetailFragmentContract.View) {
+    override fun getForecastDayDetails(location:String, view: DetailFragmentContract.View) {
 
+        //essentially the same as getting search results apart from the fact we are passing to a different handler and usin a
+        //different view
+
+        //TODO implement one function for both search and detail with a different handler specified in method
         this.myDetailView=view
 
-        //we can get the whole forecast object and then extract the required day
-        //since we have already stored a location in our db to get to this stage we just need to
-        //retrieve the forecast from our db
 
         val observable = forecastFromDb(location)
         compositeDisposable.add(observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map { forecast -> forecast.days }
-                .map { days -> days[day] }
+               // .map { days -> days[day] }
                 //show progress once subscribed
-                .doOnSubscribe { myRecentView.showProgress(true) }
-                .doOnTerminate { myRecentView.showProgress(false) }
+                .doOnSubscribe { myDetailView.showProgress(true) }
+                .doOnTerminate { myDetailView.showProgress(false) }
                 .doOnError{ error -> view.showError(error)}
                 .subscribe{ result -> this.handleResultDetail(result!!) })
 
@@ -155,9 +156,8 @@ class ApplicationModel (private val myService: ForecastService
     }
 
 
-    override fun handleResultDetail(day:Day) {
-
-           myDetailView.showForecast(day)
+    override fun handleResultDetail(days: List<Day>) {
+           myDetailView.showForecast(days)
 
     }
 

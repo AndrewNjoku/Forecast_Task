@@ -15,9 +15,8 @@ import com.google.gson.annotations.SerializedName
 
 @Entity
 class Forecast {
-    @PrimaryKey(autoGenerate = true)
-    var id: Int = 0
-
+    //@PrimaryKey(autoGenerate = true)
+    //var id: Int = 0
     @SerializedName("cod")
     @Expose
     var cod: String? = null
@@ -35,8 +34,9 @@ class Forecast {
     @Expose
     var days: List<Day>? = null
 
+    @PrimaryKey
     @Embedded
     @SerializedName("city")
     @Expose
-    var city: City? = null
+    lateinit var city: City
 }
