@@ -18,18 +18,20 @@ import butterknife.ButterKnife
 import butterknife.OnClick
 import butterknife.Unbinder
 import com.example.ForecastApp.Activities.HomeActivity
-import com.example.ForecastApp.DI.Dagger_Composer.WeatherFeatureModule
+import com.example.ForecastApp.DI.Dagger_Weather_Feature.SearchFeatureModule
 import com.example.ForecastApp.R
 import com.example.ForecastApp.adapter.SearchResultsAdapter
 import com.example.ForecastApp.application.App
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
 import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
 import com.example.ForecastApp.mvp.MainScreenFragment.SearchResultsFragmentContract
+import java.lang.ClassCastException
 import javax.inject.Inject
 
 
 
 class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
+
 
 
     lateinit var forecastAdapter: SearchResultsAdapter
@@ -68,7 +70,6 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
         forecastAdapter= SearchResultsAdapter()
             searchresults.layoutManager = LinearLayoutManager(activityContext)
             searchresults.adapter = forecastAdapter
-        presenter.attach(activityContext,this)
         //retrieve the location of the city thats passed in the bundle wehen we created this fragment
         presenter.showSearchResults(location)
          val b = activityContext as MainActivityContract.View
@@ -83,18 +84,24 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
     }
     override fun injectDependencies() {
 
-       App.instance.component.plus(WeatherFeatureModule()).inject(this)
-    }
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        this.activityContext=context
-
+       App.instance.component.plus(SearchFeatureModule(this,activity as Context)).inject(this)
     }
 
-
-    override fun showSearchResults(days: List<Day>) {
-        forecastAdapter.setData(days)
+    override fun showResults(days: List<*>) {
+        try {
+            forecastAdapter.setData(days as List<Day>)
+        }
+        catch (exception: ClassCastException)
+        {
+            Log.e("CLASSCASTEXCEPTION",exception.toString())
+        }
     }
+
+    override fun showNoResults() {
+      Log.e("DATA","No data to update")
+    }
+
+
 
     override fun showError(throwable: Throwable?) {
         throwable?.printStackTrace()

@@ -12,29 +12,14 @@ import com.example.minimoneybox.model.ApplicationModelContract
 //this fragment is made up of the search bar aswell as a ListView containing recent searches, once a search has been
 //actioned, ie someone has chosen a city this screen will be replaced with my second fragment hich is a search results fragment
 
-class MainScreenFragmentPresenter(private val myModelInteractor: ApplicationModelContract) : MainScreenFragmentContract.Presenter {
-
-    lateinit var context : Context
-    lateinit var fragView: MainScreenFragmentContract.View
-
-    override fun attach(context: Context, fragView: MainScreenFragmentContract.View) {
-        this.activityContext = context
-        this.fragView=fragView
-
-            myModelInteractor.getRecentForecasts(fragView)
-
-    }
-    override fun getWeatherDetails() {
-
-    }
-
-    override fun detatchView() {
-
-    }
+class MainScreenFragmentPresenter(private val myModelInteractor: ApplicationModelContract, private val context: Context) : MainScreenFragmentContract.Presenter {
 
     private var mListener: OnLocationSelectedListener? = null
-    lateinit var activityContext: Context
 
+    override fun getRecentForecasts(){
+
+        myModelInteractor.getRecentForecasts()
+    }
     override fun setSelectedLocation(location: String) {
 
         Log.e("presenter_main","insidesetlocation")
@@ -47,16 +32,16 @@ class MainScreenFragmentPresenter(private val myModelInteractor: ApplicationMode
     private fun checkIfListenerAttached() {
         if (mListener == null) {
             try {
-                mListener = activityContext as HomeActivity
+                mListener = context as HomeActivity
             } catch (e: ClassCastException) {
-                throw ClassCastException("${activityContext}must implement OnLocationSelectedListener")
+                throw ClassCastException("${context}must implement OnLocationSelectedListener")
             }
         }
     }
+    override fun detatchView() {
 
-    override fun getRecentForecasts(){
-
-        myModelInteractor.getRecentForecasts(fragView)
     }
+
+
 
 }

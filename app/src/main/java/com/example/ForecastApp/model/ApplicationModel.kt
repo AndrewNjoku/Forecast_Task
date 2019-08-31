@@ -21,14 +21,6 @@ class ApplicationModel (private val myService: ForecastService
 
 
 
-    //weather detail view
-    private lateinit var myDetailView: DetailFragmentContract.View
-
-    //main page weather search + recent weather vue
-    private lateinit var myResultsView: SearchResultsFragmentContract.View
-
-    private lateinit var myRecentView: MainScreenFragmentContract.View
-
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
@@ -63,10 +55,7 @@ class ApplicationModel (private val myService: ForecastService
 
     //based on our weather search in the main activity, once the user selects a city, this method will be called
     //and the result will be stored in the database
-    override fun getForecastSearch(isOnline: Boolean, location:String, view : SearchResultsFragmentContract.View) {
-        this.myResultsView=view
-
-        //get weather for url by name
+    override fun getForecastSearch(isOnline: Boolean, location:String) {
 
         val observable = if (isOnline) forecastFromAPI(location) else forecastFromDb(location)
         compositeDisposable.add(observable
@@ -74,46 +63,37 @@ class ApplicationModel (private val myService: ForecastService
                 .observeOn(AndroidSchedulers.mainThread())
                 .map { forecast -> forecast.days }
                 //show progress once subscribed
-                .doOnSubscribe { myResultsView.showProgress(true) }
-                .doOnTerminate { myResultsView.showProgress(false) }
-                .doOnError{ error -> view.showError(error)}
+                .doOnSubscribe { myView.showProgress(true) }
+                .doOnTerminate { myView.showProgress(false) }
+                .doOnError{ error -> myView.showError(error)}
                 .subscribe{ result -> this.handleResultSearch(result!!) })
 
     }
 
-    override fun getRecentForecasts( view : MainScreenFragmentContract.View) {
-        this.myRecentView=view
+    override fun getRecentForecasts() {
+
         val observable = allForecasts
         compositeDisposable.add(observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 //show progress once subscribed
-                .doOnSubscribe { myRecentView.showProgress(true) }
-                .doOnTerminate { myRecentView.showProgress(false) }
-                .doOnError{ error -> view.showError(error)}
+                .doOnSubscribe { myView.showProgress(true) }
+                .doOnTerminate { myView.showProgress(false) }
+                .doOnError{ error -> myView.showError(error)}
                 .subscribe{ result -> this.handleResultRecent(result!!) })
 
     }
 
-    override fun getForecastDayDetails(location:String, view: DetailFragmentContract.View) {
-
-        //essentially the same as getting search results apart from the fact we are passing to a different handler and usin a
-        //different view
-
-        //TODO implement one function for both search and detail with a different handler specified in method
-        this.myDetailView=view
-
+    override fun getForecastDayDetails(location:String) {
 
         val observable = forecastFromDb(location)
         compositeDisposable.add(observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map { forecast -> forecast.days }
-               // .map { days -> days[day] }
-                //show progress once subscribed
-                .doOnSubscribe { myDetailView.showProgress(true) }
-                .doOnTerminate { myDetailView.showProgress(false) }
-                .doOnError{ error -> view.showError(error)}
+                .doOnSubscribe { myView.showProgress(true) }
+                .doOnTerminate { myView.showProgress(false) }
+                .doOnError{ error -> myView.showError(error)}
                 .subscribe{ result -> this.handleResultDetail(result!!) })
 
     }
@@ -143,23 +123,23 @@ class ApplicationModel (private val myService: ForecastService
     override fun handleResultRecent(forecasts: List<Forecast>) {
         if (forecasts.isEmpty()) {
             //do nothing that is fine
-            myRecentView.showNoResults()
+            myView.showNoResults()
         } else {
-            myRecentView.showResults(forecasts)
+            myView.showResults(forecasts)
         }
     }
     override fun handleResultSearch(days: List<Day>) {
         if (days.isEmpty()) {
-            myResultsView.showTryAgain(true)
+            myView.showTryAgain(true)
         } else {
-            myResultsView.showTryAgain(false)
-             myResultsView.showSearchResults(days)
+            myView.showTryAgain(false)
+             myView.showResults(days)
         }
     }
 
 
     override fun handleResultDetail(days: List<Day>) {
-           myDetailView.showForecast(days)
+           myView.showResults(days)
 
     }
 

@@ -15,10 +15,7 @@ import com.example.ForecastApp.mvp.BaseContract
 //Network helper fragment will run in the background and provide a network checking service using broadcast receiver
 //receive service calls , performing the network service the results of which will be consumed in the
 
-class NetworkHelper : Fragment(),BaseContract.View {
-    override fun injectDependencies() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+class NetworkHelper : Fragment() {
 
     private var mActivity: Context? = null
     private var mAlertDialog: AlertDialog? = null
@@ -53,12 +50,6 @@ class NetworkHelper : Fragment(),BaseContract.View {
         retainInstance = true
     }
 
-    override fun onAttach(activity: Context) {
-        super.onAttach(activity)
-        mActivity = activity
-        //throw new IllegalArgumentException("activity must extend BaseActivity and implement LocationHelper.LocationCallback");
-
-    }
 
     override fun onResume() {
 

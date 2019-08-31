@@ -10,16 +10,14 @@ interface MainScreenFragmentContract{
 
         fun savedSearchesInit()
         fun autoCompleteSearchInit()
-        fun showProgress(b: Boolean)
-        fun showError(error: Throwable?)
+
 
 
 
     }
 
     interface Presenter: BaseContract.Presenter<View> {
-        fun attach(context:Context,fragView: View)
-        fun getWeatherDetails()
+
         fun setSelectedLocation(toString: String)
         fun getRecentForecasts()
     }

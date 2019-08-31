@@ -17,19 +17,20 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import butterknife.Unbinder
-import com.example.ForecastApp.DI.Dagger_Composer.WeatherFeatureModule
-import com.example.ForecastApp.DataBank.Utils
+import com.example.ForecastApp.DI.Dagger_Weather_Feature.DetailFeatureModule
 import com.example.ForecastApp.R
 import com.example.ForecastApp.adapter.WeatherDetailAdapter
 import com.example.ForecastApp.application.App
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
 import com.example.ForecastApp.mvp.MainScreenFragment.DetailFragmentContract
 import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
+import java.lang.ClassCastException
 import javax.inject.Inject
 
 
 
 class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
+
 
 
     @Inject
@@ -77,14 +78,9 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
     }
 
 
-    override fun showForecast(days: List<Day>) {
-
-      forecastAdapter.setData(days)
-    }
-
     override fun injectDependencies() {
 
-       App.instance.component.plus(WeatherFeatureModule()).inject(this)
+       App.instance.component.plus(DetailFeatureModule(this)).inject(this)
 
     }
 
@@ -93,13 +89,29 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
         activityContext=context
 
     }
+    override fun showNoResults() {
 
-    override fun showError(throwable: Throwable) {
-        throwable.printStackTrace()
+        Log.e("WeatherDetailNoResults","no recent searches to display")
+    }
+
+    override fun showError(error: Throwable?) {
+
+        error?.printStackTrace()
         val myActivityView = activityContext as MainActivityContract.View
 
-        myActivityView.showError(throwable)
+        myActivityView.showError(error)
     }
+
+    override fun showResults(days: List<*>) {
+        try {
+            forecastAdapter.setData(days as List<Day>)
+        }
+        catch(exception : ClassCastException){
+            Log.e("ClassCastException", "exception casting in weather detail fragment")
+        }
+
+    }
+
 
     override fun showProgress(shouldShow: Boolean) {
         progressBar.visibility = if (shouldShow) View.VISIBLE else View.GONE

@@ -10,13 +10,9 @@ import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import butterknife.BindView
 import butterknife.ButterKnife
-
 import butterknife.Unbinder
-
 import com.example.ForecastApp.DI.Dagger_Composer.MainFeatureModule
 import com.example.ForecastApp.R
 import com.example.ForecastApp.adapter.RecentSearchesAdapter
@@ -36,7 +32,6 @@ import javax.inject.Inject
 class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
 
 
-
     @Inject
     lateinit var presenter: MainScreenFragmentContract.Presenter
 
@@ -46,8 +41,6 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
 
     //TODO shouldnt need this referecne can pass it directly to the presenter using Dagger 2
     lateinit var myActivity: Context
-
-    var recentSavedSearches : List<Forecast> =ArrayList()
 
     lateinit var savedSearchesAdapter : RecentSearchesAdapter
 
@@ -75,7 +68,6 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
         //initialise the adapter logic for the autoCOmplete text search and the recent searches list
         savedSearchesInit()
         autoCompleteSearchInit()
-        presenter.attach(myActivity,this)
         presenter.getRecentForecasts()
 
 
@@ -87,26 +79,22 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
     }
 
     override fun injectDependencies() {
-        App.instance.component.plus(MainFeatureModule(this)).inject(this)
+        App.instance.component.plus(MainFeatureModule(this,activity as Context)).inject(this)
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        this.myActivity=context
 
-    }
 
     override fun savedSearchesInit() {
 
-        savedSearchesAdapter= RecentSearchesAdapter(myActivity)
+        savedSearchesAdapter= RecentSearchesAdapter(activity as Context)
         mSavedResults.adapter = savedSearchesAdapter
         mSavedResults.onItemClickListener = AdapterView.OnItemClickListener {
 
             parent, view, position, id ->
             val p = parent.getItemAtPosition(position) as Forecast
-            val location = p.city?.name.toString()
+            val location = p.city.name
 
-            val activityView = myActivity as MainActivityContract.View
+            val activityView = activity as MainActivityContract.View
 
             activityView.showSearchResultsFragment(location)
 
@@ -145,7 +133,21 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
 
     override fun showError(error: Throwable?) {
 
+        val activityView = activity as MainActivityContract.View
+
+        activityView.showError(error)
+
     }
+
+    override fun showTryAgain(b: Boolean) {
+
+        val activityView = activity as MainActivityContract.View
+
+
+        activityView.showTryAgain(b)
+
+    }
+
 
     override fun showNoResults() {
         Log.e("MainScreenRecentSearches","no recent searches to display")

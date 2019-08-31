@@ -1,6 +1,7 @@
 package com.example.ForecastApp.DI.Dagger_Composer
 
 
+import android.content.Context
 import com.example.ForecastApp.Database.ForecastDatabase
 import com.example.ForecastApp.Fragments.MainScreenFragment
 import com.example.ForecastApp.Fragments.WeatherDetailFragment
@@ -14,7 +15,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class MainFeatureModule(private val myView: MainScreenFragmentContract.View){
+class MainFeatureModule(private val myView: MainScreenFragmentContract.View, private val context: Context){
 
     @Provides
     fun provideMainView(): MainScreenFragmentContract.View{
@@ -22,6 +23,11 @@ class MainFeatureModule(private val myView: MainScreenFragmentContract.View){
         return myView
     }
 
+    @Provides
+    fun provideContext(): Context{
+
+        return context
+    }
 
 
     @Provides
@@ -35,23 +41,9 @@ class MainFeatureModule(private val myView: MainScreenFragmentContract.View){
 
     @Provides
     @FragmentScope
-    internal fun provideMainFragmentPresenter(mymodelinteractor: ApplicationModelContract): MainScreenFragmentContract.Presenter {
+    internal fun provideMainFragmentPresenter(mymodelinteractor: ApplicationModelContract,context:Context): MainScreenFragmentContract.Presenter {
 
-        return MainScreenFragmentPresenter(mymodelinteractor)
-    }
-
-    @Provides
-    @FragmentScope
-    internal fun provideSearchResultsPresenter(myModelInteractor: ApplicationModelContract): SearchResultsFragmentContract.Presenter {
-
-        return SearchResultsFragmentPresenter(myModelInteractor)
-    }
-
-    @Provides
-    @FragmentScope
-    internal fun provideWeatherDetailsPresenter(myModelInteractor: ApplicationModelContract): DetailFragmentContract.Presenter {
-
-        return DetailFragmentPresenter(myModelInteractor)
+        return MainScreenFragmentPresenter(mymodelinteractor,context)
     }
 
 

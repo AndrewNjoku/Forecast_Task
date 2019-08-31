@@ -20,6 +20,12 @@ class BaseContract {
 
         fun showNoResults()
 
+        fun showProgress(b: Boolean)
+
+        fun showError(error: Throwable?)
+
+        fun showTryAgain(b: Boolean)
+
     }
 
 }
