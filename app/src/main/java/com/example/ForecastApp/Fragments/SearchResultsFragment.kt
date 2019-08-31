@@ -82,6 +82,7 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
 
     }
     override fun injectDependencies() {
+
        App.instance.component.plus(WeatherFeatureModule()).inject(this)
     }
     override fun onAttach(context: Context) {

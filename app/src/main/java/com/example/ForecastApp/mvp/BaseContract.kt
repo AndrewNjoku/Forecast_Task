@@ -1,6 +1,7 @@
 package com.example.ForecastApp.mvp
 
 import android.content.Context
+import com.example.ForecastApp.model.Objects.Main_Elements.Day
 
 
 class BaseContract {
@@ -14,6 +15,10 @@ class BaseContract {
     interface View {
 
        fun injectDependencies()
+
+        fun showResults(days: List<*>)
+
+        fun showNoResults()
 
     }
 

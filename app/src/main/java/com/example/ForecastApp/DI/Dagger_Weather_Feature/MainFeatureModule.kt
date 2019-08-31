@@ -14,13 +14,20 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class WeatherFeatureModule(){
+class MainFeatureModule(private val myView: MainScreenFragmentContract.View){
+
+    @Provides
+    fun provideMainView(): MainScreenFragmentContract.View{
+
+        return myView
+    }
+
 
 
     @Provides
-    fun provideModelInteractor(service:ForecastService,data:ForecastDatabase): ApplicationModelContract{
+    fun provideModelInteractor(service:ForecastService,data:ForecastDatabase, view: MainScreenFragmentContract.View): ApplicationModelContract{
 
-        return ApplicationModel(service,data)
+        return ApplicationModel(service,data,view)
     }
 
 

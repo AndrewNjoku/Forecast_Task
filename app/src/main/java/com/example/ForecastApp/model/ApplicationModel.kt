@@ -5,6 +5,7 @@ import com.example.ForecastApp.Database.ForecastDatabase
 import com.example.ForecastApp.Network.ForecastService
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
 import com.example.ForecastApp.model.Objects.Main_Elements.Forecast
+import com.example.ForecastApp.mvp.BaseContract
 import com.example.ForecastApp.mvp.MainScreenFragment.DetailFragmentContract
 import com.example.ForecastApp.mvp.MainScreenFragment.MainScreenFragmentContract
 import com.example.ForecastApp.mvp.MainScreenFragment.SearchResultsFragmentContract
@@ -15,6 +16,7 @@ import io.reactivex.schedulers.Schedulers
 
 class ApplicationModel (private val myService: ForecastService
                         , private val myDatabase: ForecastDatabase
+                        , private val myView: BaseContract.View
                         ): ApplicationModelContract {
 
 
@@ -141,9 +143,9 @@ class ApplicationModel (private val myService: ForecastService
     override fun handleResultRecent(forecasts: List<Forecast>) {
         if (forecasts.isEmpty()) {
             //do nothing that is fine
-            myRecentView.showNoRecentSearches()
+            myRecentView.showNoResults()
         } else {
-            myRecentView.showRecentSavedSearches(forecasts)
+            myRecentView.showResults(forecasts)
         }
     }
     override fun handleResultSearch(days: List<Day>) {

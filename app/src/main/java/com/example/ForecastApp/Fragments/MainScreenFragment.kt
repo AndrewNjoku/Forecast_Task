@@ -16,8 +16,8 @@ import butterknife.BindView
 import butterknife.ButterKnife
 
 import butterknife.Unbinder
-import com.example.ForecastApp.Activities.HomeActivity
-import com.example.ForecastApp.DI.Dagger_Composer.WeatherFeatureModule
+
+import com.example.ForecastApp.DI.Dagger_Composer.MainFeatureModule
 import com.example.ForecastApp.R
 import com.example.ForecastApp.adapter.RecentSearchesAdapter
 import com.example.ForecastApp.adapter.SearchAutoCompleteAdapter
@@ -27,12 +27,15 @@ import com.example.ForecastApp.model.Objects.Predicitions.Prediction
 import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
 import com.example.ForecastApp.mvp.MainScreenFragment.MainScreenFragmentContract
 import com.example.ForecastApp.widget.DelayAutoCompleteTextView
+import java.lang.ClassCastException
 import java.util.ArrayList
 
 import javax.inject.Inject
 
 
 class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
+
+
 
     @Inject
     lateinit var presenter: MainScreenFragmentContract.Presenter
@@ -84,7 +87,7 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
     }
 
     override fun injectDependencies() {
-        App.instance.component.plus(WeatherFeatureModule()).inject(this)
+        App.instance.component.plus(MainFeatureModule(this)).inject(this)
     }
 
     override fun onAttach(context: Context) {
@@ -130,18 +133,25 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
         }
     }
 
-    override fun showRecentSavedSearches(cities: List<Forecast>) {
-
-        savedSearchesAdapter.setRecentForecasts(cities)
+    override fun showResults(forecasts: List<*>) {
+        try {
+            savedSearchesAdapter.setRecentForecasts(forecasts as List<Forecast>)
+        }
+        catch(exception: ClassCastException){
+            Log.e("CLASSCASTEXCEPTION", exception.toString())
+        }
     }
+
 
     override fun showError(error: Throwable?) {
 
     }
 
-    override fun showNoRecentSearches() {
+    override fun showNoResults() {
         Log.e("MainScreenRecentSearches","no recent searches to display")
+
     }
+
 
     //Show loading when fetching data , will be actioned by the onSubscribe() and onComplete in my model
     override fun showProgress(b: Boolean) {

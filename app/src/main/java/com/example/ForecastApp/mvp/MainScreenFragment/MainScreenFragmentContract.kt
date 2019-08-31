@@ -10,10 +10,9 @@ interface MainScreenFragmentContract{
 
         fun savedSearchesInit()
         fun autoCompleteSearchInit()
-        fun showRecentSavedSearches(cities: List<Forecast>)
         fun showProgress(b: Boolean)
         fun showError(error: Throwable?)
-        fun showNoRecentSearches()
+
 
 
     }
