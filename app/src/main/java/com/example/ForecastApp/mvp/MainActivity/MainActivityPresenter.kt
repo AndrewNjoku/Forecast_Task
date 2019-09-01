@@ -1,28 +1,15 @@
-package com.example.ForecastApp.mvp.MainScreenFragment
+package com.example.ForecastApp.mvp.MainActivity
 
 import android.content.Context
 import com.example.ForecastApp.Activities.HomeActivity
 import com.example.ForecastApp.Fragments.NetworkHelper
+import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
 
 class MainActivityPresenter(private val context: Context) : MainActivityContract.Presenter {
 
-    val activityView = context as HomeActivity
+    private val myActivity = context as HomeActivity
 
-    override fun attach(context: Context) {
-        activityView.showMainPageFragment()
-    }
-
-    override fun attachSearchResultsFrag(location: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun attachSearchResultsFrag(location: Long) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    val myActivity = context as HomeActivity
-
-    internal var mNetworkHelper: NetworkHelper? = null
+    private var mNetworkHelper: NetworkHelper? = null
 
     override fun initiateNetworkFragment() {
         //when we create the mainActivity we check if the network helper fragment has been created (invisible)
@@ -36,18 +23,8 @@ class MainActivityPresenter(private val context: Context) : MainActivityContract
 
     }
 
-
-
-    override fun start() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
     override fun stop() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun detatchView() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        mNetworkHelper=null
     }
 
 

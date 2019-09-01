@@ -2,7 +2,7 @@ package com.example.ForecastApp.DI.Dagger_Composer
 
 import android.content.Context
 import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
-import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityPresenter
+import com.example.ForecastApp.mvp.MainActivity.MainActivityPresenter
 
 
 import dagger.Module

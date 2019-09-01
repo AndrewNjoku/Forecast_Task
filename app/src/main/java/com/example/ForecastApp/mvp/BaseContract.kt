@@ -9,7 +9,8 @@ class BaseContract {
 
     interface Presenter<in T> {
 
-        fun detatchView()
+
+        fun stop()
     }
 
     interface View {

@@ -32,13 +32,10 @@ import javax.inject.Inject
 
 class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
 
-
-
     lateinit var forecastAdapter: SearchResultsAdapter
 
     @Inject
     lateinit var presenter: SearchResultsFragmentContract.Presenter
-
 
     private lateinit var activityContext: Context
 
@@ -78,13 +75,16 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
             b.showDetailsFragment(location)
 
         }
-
         return view
-
     }
     override fun injectDependencies() {
 
        App.instance.component.plus(SearchFeatureModule(this,activity as Context)).inject(this)
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        presenter.detatchView()
     }
 
     override fun showResults(days: List<*>) {
@@ -95,13 +95,12 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
         {
             Log.e("CLASSCASTEXCEPTION",exception.toString())
         }
+        presenter.stop()
     }
 
     override fun showNoResults() {
       Log.e("DATA","No data to update")
     }
-
-
 
     override fun showError(throwable: Throwable?) {
         throwable?.printStackTrace()
@@ -129,7 +128,6 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
             searchresults.visibility = View.VISIBLE
         }
     }
-
     @OnClick(R.id.search_try_again)
     fun onTryAgainClicked() {
         presenter.showSearchResults(location)

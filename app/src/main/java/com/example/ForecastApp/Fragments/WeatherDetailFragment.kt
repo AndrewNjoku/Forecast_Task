@@ -31,8 +31,6 @@ import javax.inject.Inject
 
 class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
 
-
-
     @Inject
     lateinit var presenter: DetailFragmentContract.Presenter
 
@@ -63,7 +61,6 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
         val view =inflater.inflate(R.layout.forecast_detail_f,container,false)
         binder = ButterKnife.bind(this,view)
         location = arguments?.getString("Location").toString()
-        presenter.attach(activityContext,this)
             recyclerView.layoutManager = LinearLayoutManager(activityContext)
             recyclerView.adapter = forecastAdapter
         presenter.getDayDetails(location)
@@ -76,19 +73,17 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
         return view
 
     }
-
-
     override fun injectDependencies() {
 
        App.instance.component.plus(DetailFeatureModule(this)).inject(this)
 
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        activityContext=context
-
+    override fun onDetach() {
+        super.onDetach()
+        presenter.detatchView()
     }
+
     override fun showNoResults() {
 
         Log.e("WeatherDetailNoResults","no recent searches to display")
@@ -109,6 +104,7 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
         catch(exception : ClassCastException){
             Log.e("ClassCastException", "exception casting in weather detail fragment")
         }
+        presenter.stop()
 
     }
 
@@ -136,10 +132,7 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
       // presenter.getWeatherDetails()
     }
 
-    override fun onStop() {
-        super.onStop()
-      //  presenter.stop()
-    }
+
     fun newInstance(location: String): WeatherDetailFragment{
         val detailFragment = WeatherDetailFragment()
         val bundle = Bundle().apply {
