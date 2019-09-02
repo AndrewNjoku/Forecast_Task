@@ -57,43 +57,50 @@ class ApplicationModel (private val myService: ForecastService
     //and the result will be stored in the database
     override fun getForecastSearch(isOnline: Boolean, location:String) {
 
+        val view = myView as SearchResultsFragmentContract.View
+
         val observable = if (isOnline) forecastFromAPI(location) else forecastFromDb(location)
         compositeDisposable.add(observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map { forecast -> forecast.days }
                 //show progress once subscribed
-                .doOnSubscribe { myView.showProgress(true) }
-                .doOnTerminate { myView.showProgress(false) }
-                .doOnError{ error -> myView.showError(error)}
+                .doOnSubscribe { view.showProgress(true) }
+                .doOnTerminate { view.showProgress(false) }
+                .doOnError{ error -> view.showError(error)}
                 .subscribe{ result -> this.handleResultSearch(result!!) })
 
     }
 
     override fun getRecentForecasts() {
+        val view = myView as MainScreenFragmentContract.View
+
 
         val observable = allForecasts
         compositeDisposable.add(observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 //show progress once subscribed
-                .doOnSubscribe { myView.showProgress(true) }
-                .doOnTerminate { myView.showProgress(false) }
-                .doOnError{ error -> myView.showError(error)}
+                .doOnSubscribe { view.showProgress(true) }
+                .doOnTerminate { view.showProgress(false) }
+                .doOnError{ error -> view.showError(error)}
                 .subscribe{ result -> this.handleResultRecent(result!!) })
 
     }
 
     override fun getForecastDayDetails(location:String) {
 
+        val view = myView as DetailFragmentContract.View
+
+
         val observable = forecastFromDb(location)
         compositeDisposable.add(observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map { forecast -> forecast.days }
-                .doOnSubscribe { myView.showProgress(true) }
-                .doOnTerminate { myView.showProgress(false) }
-                .doOnError{ error -> myView.showError(error)}
+                .doOnSubscribe { view.showProgress(true) }
+                .doOnTerminate { view.showProgress(false) }
+                .doOnError{ error -> view.showError(error)}
                 .subscribe{ result -> this.handleResultDetail(result!!) })
 
     }
