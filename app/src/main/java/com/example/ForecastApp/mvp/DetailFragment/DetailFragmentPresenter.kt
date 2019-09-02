@@ -1,6 +1,7 @@
-package com.example.ForecastApp.mvp.MainScreenFragment
+package com.example.ForecastApp.mvp.DetailFragment
 
 
+import com.example.ForecastApp.mvp.MainScreenFragment.DetailFragmentContract
 import com.example.minimoneybox.model.ApplicationModelContract
 
 class DetailFragmentPresenter(private val modelInteractor: ApplicationModelContract) : DetailFragmentContract.Presenter {

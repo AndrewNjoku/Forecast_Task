@@ -3,7 +3,6 @@ package com.example.ForecastApp.mvp.MainActivity
 import android.content.Context
 import com.example.ForecastApp.Activities.HomeActivity
 import com.example.ForecastApp.Fragments.NetworkHelper
-import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
 
 class MainActivityPresenter(private val context: Context) : MainActivityContract.Presenter {
 
@@ -20,7 +19,6 @@ class MainActivityPresenter(private val context: Context) : MainActivityContract
             mNetworkHelper = NetworkHelper.newInstance()
             myActivity.supportFragmentManager.beginTransaction().add(mNetworkHelper!!, NetworkHelper.TAG).commit()
         }
-
     }
 
     override fun stop() {

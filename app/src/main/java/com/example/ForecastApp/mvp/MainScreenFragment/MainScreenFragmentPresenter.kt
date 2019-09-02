@@ -12,7 +12,7 @@ import com.example.minimoneybox.model.ApplicationModelContract
 //this fragment is made up of the search bar aswell as a ListView containing recent searches, once a search has been
 //actioned, ie someone has chosen a city this screen will be replaced with my second fragment hich is a search results fragment
 
-class MainScreenFragmentPresenter(private val myModelInteractor: ApplicationModelContract, private val context: Context) : MainScreenFragmentContract.Presenter {
+class MainScreenFragmentPresenter(private val myModelInteractor: ApplicationModelContract, private val context: HomeActivity) : MainScreenFragmentContract.Presenter {
 
     private var mListener: OnLocationSelectedListener? = null
 
@@ -29,18 +29,21 @@ class MainScreenFragmentPresenter(private val myModelInteractor: ApplicationMode
         mListener?.onLocationSelected(location)
     }
 
+
     private fun checkIfListenerAttached() {
         if (mListener == null) {
             try {
-                mListener = context as HomeActivity
+                mListener = context as OnLocationSelectedListener
             } catch (e: ClassCastException) {
                 throw ClassCastException("${context}must implement OnLocationSelectedListener")
             }
         }
     }
-    override fun detatchView() {
 
+    override fun stop() {
+       myModelInteractor.stop()
     }
+
 
 
 

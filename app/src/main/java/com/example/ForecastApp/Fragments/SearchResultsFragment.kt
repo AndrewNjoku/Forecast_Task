@@ -18,12 +18,12 @@ import butterknife.ButterKnife
 import butterknife.OnClick
 import butterknife.Unbinder
 import com.example.ForecastApp.Activities.HomeActivity
-import com.example.ForecastApp.DI.Dagger_Weather_Feature.SearchFeatureModule
+import com.example.ForecastApp.DI.Dagger_Main.SearchPresenterModule
 import com.example.ForecastApp.R
 import com.example.ForecastApp.adapter.SearchResultsAdapter
 import com.example.ForecastApp.application.App
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
-import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
+import com.example.ForecastApp.mvp.MainActivity.MainActivityContract
 import com.example.ForecastApp.mvp.MainScreenFragment.SearchResultsFragmentContract
 import java.lang.ClassCastException
 import javax.inject.Inject
@@ -79,13 +79,9 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
     }
     override fun injectDependencies() {
 
-       App.instance.component.plus(SearchFeatureModule(this,activity as Context)).inject(this)
+       App.instance.component.plus(SearchPresenterModule(this,activity as HomeActivity )).inject(this)
     }
 
-    override fun onDetach() {
-        super.onDetach()
-        presenter.detatchView()
-    }
 
     override fun showResults(days: List<*>) {
         try {
@@ -102,11 +98,11 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
       Log.e("DATA","No data to update")
     }
 
-    override fun showError(throwable: Throwable?) {
-        throwable?.printStackTrace()
+    override fun showError(error: Throwable?) {
+        error?.printStackTrace()
         val myActivityView = activityContext as MainActivityContract.View
 
-        myActivityView.showError(throwable!!)
+        myActivityView.showError(error!!)
     }
 
     override fun showProgress(shouldShow: Boolean) {

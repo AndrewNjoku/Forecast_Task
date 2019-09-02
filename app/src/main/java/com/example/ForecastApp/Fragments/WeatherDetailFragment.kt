@@ -17,13 +17,13 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import butterknife.Unbinder
-import com.example.ForecastApp.DI.Dagger_Weather_Feature.DetailFeatureModule
+import com.example.ForecastApp.DI.Dagger_Main.DetailPresenterModule
 import com.example.ForecastApp.R
 import com.example.ForecastApp.adapter.WeatherDetailAdapter
 import com.example.ForecastApp.application.App
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
 import com.example.ForecastApp.mvp.MainScreenFragment.DetailFragmentContract
-import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
+import com.example.ForecastApp.mvp.MainActivity.MainActivityContract
 import java.lang.ClassCastException
 import javax.inject.Inject
 
@@ -75,13 +75,8 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
     }
     override fun injectDependencies() {
 
-       App.instance.component.plus(DetailFeatureModule(this)).inject(this)
+       App.instance.component.plus(DetailPresenterModule(this)).inject(this)
 
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        presenter.detatchView()
     }
 
     override fun showNoResults() {

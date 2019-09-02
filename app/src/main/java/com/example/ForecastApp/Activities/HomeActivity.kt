@@ -2,8 +2,7 @@ package com.example.ForecastApp.Activities
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.AdapterView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ForecastApp.DI.Dagger_Composer.ComposerComponent
 import com.example.ForecastApp.DI.Dagger_Composer.ComposerModule
@@ -13,17 +12,16 @@ import com.example.ForecastApp.Fragments.OnLocationSelectedListener
 import com.example.ForecastApp.Fragments.SearchResultsFragment
 import com.example.ForecastApp.Fragments.WeatherDetailFragment
 import com.example.ForecastApp.R
-import com.example.ForecastApp.adapter.SearchResultsAdapter
-import com.example.ForecastApp.model.Objects.Main_Elements.Day
-import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
+import com.example.ForecastApp.mvp.MainActivity.MainActivityContract
 import javax.inject.Inject
 
 class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, MainActivityContract.View {
+
     override fun showDetailFragment(dayPos: Int) {
 
     }
 
-    lateinit var activityComponent: ComposerComponent
+    private lateinit var activityComponent: ComposerComponent
 
 
     @Inject
@@ -42,7 +40,7 @@ class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, MainActivi
         super.onCreate(savedInstanceState)
         injectDependencies()
         setContentView(R.layout.activity_home)
-        //TODO use dagger 2 to pass view to presenter
+
 
         presenter.initiateNetworkFragment()
         showMainPageFragment()
@@ -52,6 +50,17 @@ class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, MainActivi
       showMainPageFragment()
     }
 
+    override fun showError(error: Throwable?) {
+
+        Toast.makeText(this,"There has been an error:" + error?.localizedMessage,Toast.LENGTH_LONG)
+    }
+    override fun showTryAgain(b: Boolean) {
+
+        Toast.makeText(this, "There has been a problem, Please try again", Toast.LENGTH_LONG)
+    }
+
+
+
     override fun injectDependencies() {
         activityComponent= DaggerComposerComponent.builder()
                 .composerModule(ComposerModule(this))
@@ -60,9 +69,6 @@ class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, MainActivi
     }
 
 
-    override fun showError(throwable: Throwable) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     override fun showMainPageFragment() {
         supportFragmentManager.beginTransaction()

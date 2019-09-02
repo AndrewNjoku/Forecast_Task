@@ -14,7 +14,7 @@ class SearchResultsFragmentPresenter(private val myModelInteractor: ApplicationM
         myModelInteractor.getForecastSearch(Utils.isOnline(context),location)
     }
 
-    override fun detatchView() {
+    override fun stop() {
         myModelInteractor.stop()
     }
 

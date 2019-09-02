@@ -13,18 +13,18 @@ import androidx.fragment.app.Fragment
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.Unbinder
-import com.example.ForecastApp.DI.Dagger_Composer.MainFeatureModule
+import com.example.ForecastApp.Activities.HomeActivity
+import com.example.ForecastApp.DI.Dagger_Main.MainPresenterModule
 import com.example.ForecastApp.R
 import com.example.ForecastApp.adapter.RecentSearchesAdapter
 import com.example.ForecastApp.adapter.SearchAutoCompleteAdapter
 import com.example.ForecastApp.application.App
 import com.example.ForecastApp.model.Objects.Main_Elements.Forecast
 import com.example.ForecastApp.model.Objects.Predicitions.Prediction
-import com.example.ForecastApp.mvp.MainScreenFragment.MainActivityContract
+import com.example.ForecastApp.mvp.MainActivity.MainActivityContract
 import com.example.ForecastApp.mvp.MainScreenFragment.MainScreenFragmentContract
 import com.example.ForecastApp.widget.DelayAutoCompleteTextView
 import java.lang.ClassCastException
-import java.util.ArrayList
 
 import javax.inject.Inject
 
@@ -38,9 +38,6 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
     private val THRESHOLD = 3 //minimum chars before search
 
     private var unbinder: Unbinder? = null
-
-    //TODO shouldnt need this referecne can pass it directly to the presenter using Dagger 2
-    lateinit var myActivity: Context
 
     lateinit var savedSearchesAdapter : RecentSearchesAdapter
 
@@ -79,7 +76,7 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
     }
 
     override fun injectDependencies() {
-        App.instance.component.plus(MainFeatureModule(this,activity as Context)).inject(this)
+        App.instance.component.plus(MainPresenterModule(this,activity as HomeActivity)).inject(this)
     }
 
 
@@ -105,7 +102,7 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
     override fun autoCompleteSearchInit() {
         //Autocomplete initialisation
         mSearchView.threshold = THRESHOLD //min chars before search
-        mSearchView.setAdapter(SearchAutoCompleteAdapter(myActivity))
+        mSearchView.setAdapter(SearchAutoCompleteAdapter(activity as Context))
         mSearchView.setLoadingIndicator(mProgress)
         mSearchView.onItemClickListener = AdapterView.OnItemClickListener {
 
@@ -168,7 +165,7 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
     override fun onDetach() {
         super.onDetach()
         unbinder?.unbind()
-        presenter.detatchView()
+      //  presenter.detatchView()
     }
 
 }

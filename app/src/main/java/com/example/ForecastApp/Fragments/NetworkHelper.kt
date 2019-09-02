@@ -10,6 +10,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.example.ForecastApp.Activities.HomeActivity
 import com.example.ForecastApp.mvp.BaseContract
 
 //Network helper fragment will run in the background and provide a network checking service using broadcast receiver
@@ -17,7 +18,7 @@ import com.example.ForecastApp.mvp.BaseContract
 
 class NetworkHelper : Fragment() {
 
-    private var mActivity: Context? = null
+
     private var mAlertDialog: AlertDialog? = null
 
     private val onNotice = object : BroadcastReceiver() {
@@ -29,7 +30,7 @@ class NetworkHelper : Fragment() {
 
 
             if (intent.hasExtra(CHECK_INTERNET) && !intent.getBooleanExtra(CHECK_INTERNET, true)) {
-                showAlertDialog(mActivity, "Internet Connection",
+                showAlertDialog(activity, "Internet Connection",
                         "No internet connection available.\n\n" + "Please check your internet connection and try again.")
             } else {
                 //if the connection is reset then the Network CHanged receiver will send another broadcast and we can dismiss the
@@ -55,9 +56,9 @@ class NetworkHelper : Fragment() {
 
         super.onResume()
         val iff = IntentFilter(CHECK_INTERNET)
-        LocalBroadcastManager.getInstance(mActivity!!).registerReceiver(onNotice, iff)
-        if (!isInternetConnected(mActivity!!)) {
-            showAlertDialog(mActivity, "Internet Connection",
+        LocalBroadcastManager.getInstance(activity as Context).registerReceiver(onNotice, iff)
+        if (!isInternetConnected(activity as Context)) {
+            showAlertDialog(activity as Context, "Internet Connection",
                     "No internet connection available.\n\n" + "Please check your internet connection and try again.")
         }
 
@@ -65,13 +66,9 @@ class NetworkHelper : Fragment() {
 
     override fun onPause() {
         super.onPause()
-        LocalBroadcastManager.getInstance(mActivity!!).unregisterReceiver(onNotice)
+        LocalBroadcastManager.getInstance(activity as Context).unregisterReceiver(onNotice)
     }
 
-    override fun onDetach() {
-        super.onDetach()
-        mActivity = null
-    }
 
     private fun showAlertDialog(context: Context?, title: String, message: String) {
         if (mAlertDialog != null && mAlertDialog!!.isShowing) {

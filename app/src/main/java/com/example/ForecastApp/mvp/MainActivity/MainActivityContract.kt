@@ -1,4 +1,4 @@
-package com.example.ForecastApp.mvp.MainScreenFragment
+package com.example.ForecastApp.mvp.MainActivity
 
 import android.content.Context
 import com.example.ForecastApp.mvp.BaseContract
@@ -6,19 +6,22 @@ import com.example.ForecastApp.mvp.BaseContract
 
 interface MainActivityContract {
 
-    interface View :BaseContract.View{
+    interface View {
 
-
+        fun injectDependencies()
         fun showMainPageFragment()
         fun showSearchResultsFragment(location: String)
         fun showDetailsFragment(location: String)
+        fun showError(error: Throwable?)
+        fun showTryAgain(b: Boolean)
 
 
     }
 
-    interface Presenter : BaseContract.Presenter<View>{
+    interface Presenter {
 
         fun initiateNetworkFragment()
 
+        fun stop()
     }
 }
