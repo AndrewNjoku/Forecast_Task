@@ -37,8 +37,6 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
     @Inject
     lateinit var presenter: SearchResultsFragmentContract.Presenter
 
-    private lateinit var activityContext: Context
-
     var binder: Unbinder? = null
 
     lateinit var location : String
@@ -61,15 +59,15 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
         binder = ButterKnife.bind(this,view)
 
         location = arguments?.getString("Location").toString()
-        val a =activityContext as HomeActivity
+        val a =activity as HomeActivity
        val bar = a.supportActionBar
         bar?.title =location
         forecastAdapter= SearchResultsAdapter()
-            searchresults.layoutManager = LinearLayoutManager(activityContext)
+            searchresults.layoutManager = LinearLayoutManager(activity)
             searchresults.adapter = forecastAdapter
         //retrieve the location of the city thats passed in the bundle wehen we created this fragment
         presenter.showSearchResults(location)
-         val b = activityContext as MainActivityContract.View
+         val b = activity as MainActivityContract.View
         detailb.setOnClickListener {
             Log.e("sclick","button clicked ")
             b.showDetailsFragment(location)
@@ -100,7 +98,7 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
 
     override fun showError(error: Throwable?) {
         error?.printStackTrace()
-        val myActivityView = activityContext as MainActivityContract.View
+        val myActivityView = activity as MainActivityContract.View
 
         myActivityView.showError(error!!)
     }

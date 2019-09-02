@@ -10,20 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="253a9b01-4ab5-448c-9539-fe0b64c6dc45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Detail/DetailComponent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Detail/DetailPresenterModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -35,23 +21,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/AppComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/AppComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Composer/ComposerModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Composer/ComposerModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Weather_Feature/DetailFeatureModule.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Weather_Feature/FragmentScope.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/FragmentScope.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Weather_Feature/MainFeatureModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPresenterModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Weather_Feature/SearchFeatureModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Search/SearchPresenterModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Weather_Feature/WeatherFeatureComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPageComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/MainScreenFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/MainScreenFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/NetworkHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/NetworkHelper.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainActivity/MainActivityContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainActivity/MainActivityContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainActivity/MainActivityPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainActivity/MainActivityPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentPresenter.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,17 +58,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="85" column="45" selection-start-line="85" selection-start-column="45" selection-end-line="85" selection-end-column="45" />
+            <state relative-caret-position="-930">
+              <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1249">
-              <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
+            <state relative-caret-position="-759">
+              <caret line="67" column="49" lean-forward="true" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -147,10 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPresenterModule.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="6">
               <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
             </state>
           </provider>
@@ -227,7 +198,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Search/SearchComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPageComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/AppComponent.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainActivity/MainActivityContract.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainActivity/MainActivityPresenter.kt" />
@@ -235,12 +205,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/NetworkHelper.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Search/SearchPresenterModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentPresenter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Composer/ComposerModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Detail/DetailPresenterModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentPresenter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/MainScreenFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPresenterModule.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt" />
       </list>
     </option>
   </component>
@@ -461,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567341497470</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added separate subComponents for each screen of my app. This provides presenter module in the current state, and if there are any other modules needed in the future just need to crate a module to provide its instances.">
+      <created>1567447839385</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567447839385</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -478,14 +456,14 @@
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="1" />
-      <window_info anchor="bottom" id="Logcat" order="2" sideWeight="0.7336874" weight="0.05464481" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="2" sideWeight="0.7336874" visible="true" weight="0.05464481" />
       <window_info anchor="bottom" id="TODO" order="3" />
       <window_info anchor="bottom" id="Android Profiler" order="4" />
       <window_info anchor="bottom" id="Debug" order="5" />
       <window_info anchor="bottom" id="Terminal" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.2663126" side_tool="true" weight="0.91862565" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Build" order="9" sideWeight="0.7344461" visible="true" weight="0.9453552" />
+      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.7344461" weight="0.9453552" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49620637" weight="0.66484517" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -822,20 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="85" column="45" selection-start-line="85" selection-start-column="45" selection-end-line="85" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1249">
-          <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/example/ForecastApp/DI/Dagger_App/AppComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -873,8 +837,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPresenterModule.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="6">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-930">
+          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-759">
+          <caret line="67" column="49" lean-forward="true" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
         </state>
       </provider>
     </entry>

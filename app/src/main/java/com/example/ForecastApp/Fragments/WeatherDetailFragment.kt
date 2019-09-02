@@ -36,8 +36,6 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
 
     private val forecastAdapter = WeatherDetailAdapter()
 
-    private lateinit var activityContext: Context
-
     lateinit var location : String
 
     var day: Int = 0
@@ -61,10 +59,10 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
         val view =inflater.inflate(R.layout.forecast_detail_f,container,false)
         binder = ButterKnife.bind(this,view)
         location = arguments?.getString("Location").toString()
-            recyclerView.layoutManager = LinearLayoutManager(activityContext)
+            recyclerView.layoutManager = LinearLayoutManager(activity)
             recyclerView.adapter = forecastAdapter
         presenter.getDayDetails(location)
-        val b = activityContext as MainActivityContract.View
+        val b = activity as MainActivityContract.View
         searchb.setOnClickListener {
             Log.e("sclick","button clicked ")
             b.showSearchResultsFragment(location)
@@ -87,7 +85,7 @@ class WeatherDetailFragment : Fragment(), DetailFragmentContract.View {
     override fun showError(error: Throwable?) {
 
         error?.printStackTrace()
-        val myActivityView = activityContext as MainActivityContract.View
+        val myActivityView = activity as MainActivityContract.View
 
         myActivityView.showError(error)
     }
