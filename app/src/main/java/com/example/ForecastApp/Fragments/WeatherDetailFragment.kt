@@ -3,7 +3,6 @@ package com.example.ForecastApp.Fragments
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 
@@ -22,7 +21,7 @@ import com.example.ForecastApp.R
 import com.example.ForecastApp.adapter.WeatherDetailAdapter
 import com.example.ForecastApp.application.App
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
-import com.example.ForecastApp.mvp.MainScreenFragment.DetailFragmentContract
+import com.example.ForecastApp.mvp.DetailFragment.DetailFragmentContract
 import com.example.ForecastApp.mvp.MainActivity.MainActivityContract
 import java.lang.ClassCastException
 import javax.inject.Inject

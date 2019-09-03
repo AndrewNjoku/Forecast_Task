@@ -3,9 +3,6 @@ package com.example.minimoneybox.model
 
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
 import com.example.ForecastApp.model.Objects.Main_Elements.Forecast
-import com.example.ForecastApp.mvp.MainScreenFragment.DetailFragmentContract
-import com.example.ForecastApp.mvp.MainScreenFragment.MainScreenFragmentContract
-import com.example.ForecastApp.mvp.MainScreenFragment.SearchResultsFragmentContract
 
 
 interface ApplicationModelContract {

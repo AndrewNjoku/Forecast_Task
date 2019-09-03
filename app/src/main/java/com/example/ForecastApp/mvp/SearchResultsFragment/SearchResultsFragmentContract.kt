@@ -9,6 +9,8 @@ import com.example.ForecastApp.mvp.BaseContract
 interface SearchResultsFragmentContract{
     interface View :BaseContract.View{
         fun setActivityTitle(name: String?)
+        fun showProgress(b: Boolean)
+
 
 
     }

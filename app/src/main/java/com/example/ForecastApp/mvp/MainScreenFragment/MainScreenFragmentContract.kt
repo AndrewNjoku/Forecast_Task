@@ -10,6 +10,8 @@ interface MainScreenFragmentContract{
 
         fun savedSearchesInit()
         fun autoCompleteSearchInit()
+        fun showProgress(b: Boolean)
+
 
 
 

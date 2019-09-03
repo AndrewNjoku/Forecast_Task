@@ -6,7 +6,7 @@ import com.example.ForecastApp.Network.ForecastService
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
 import com.example.ForecastApp.model.Objects.Main_Elements.Forecast
 import com.example.ForecastApp.mvp.BaseContract
-import com.example.ForecastApp.mvp.MainScreenFragment.DetailFragmentContract
+import com.example.ForecastApp.mvp.DetailFragment.DetailFragmentContract
 import com.example.ForecastApp.mvp.MainScreenFragment.MainScreenFragmentContract
 import com.example.ForecastApp.mvp.MainScreenFragment.SearchResultsFragmentContract
 import io.reactivex.Observable
