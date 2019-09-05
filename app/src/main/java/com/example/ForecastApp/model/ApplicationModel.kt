@@ -137,16 +137,19 @@ class ApplicationModel (private val myService: ForecastService
     }
     override fun handleResultSearch(days: List<Day>) {
         if (days.isEmpty()) {
-            myView.showTryAgain(true)
+            myView.showNoResults()
         } else {
-            myView.showTryAgain(false)
              myView.showResults(days)
         }
     }
 
 
     override fun handleResultDetail(days: List<Day>) {
-           myView.showResults(days)
+        if (days.isEmpty()) {
+            myView.showNoResults()
+        } else {
+            myView.showResults(days)
+        }
 
     }
 

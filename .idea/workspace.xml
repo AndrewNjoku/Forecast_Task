@@ -21,15 +21,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Detail/DetailPresenterModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Detail/DetailPresenterModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModelContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModelContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/BaseContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/BaseContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentContract.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,37 +56,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentContract.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentContract.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-414">
-              <caret line="66" column="49" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
+            <state relative-caret-position="42">
+              <caret line="111" column="23" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -101,32 +67,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-              <folding>
-                <element signature="e#53#192#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
+            <state relative-caret-position="184">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/BaseContract.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#37#130#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="139">
+              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
             </state>
           </provider>
         </entry>
@@ -134,17 +85,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/MainScreenFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="155" column="17" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
+            <state relative-caret-position="254">
+              <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPresenterModule.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="254">
+              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/WeatherDetailAdapter.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-782">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#2717#2831#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_recent_item.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_detail_f.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="1380">
+              <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -198,7 +181,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPageComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/AppComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainActivity/MainActivityContract.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainActivity/MainActivityPresenter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/NetworkHelper.kt" />
@@ -211,11 +193,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPresenterModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/BaseContract.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentContract.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentContract.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentContract.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt" />
       </list>
     </option>
   </component>
@@ -230,8 +213,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -255,51 +239,30 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Weather_App" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="Fragments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Weather_App" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
               <item name="Weather_App" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="mvp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weather_App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="mvp" type="462c0819:PsiDirectoryNode" />
-              <item name="DetailFragment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weather_App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="mvp" type="462c0819:PsiDirectoryNode" />
-              <item name="MainScreenFragment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weather_App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ForecastApp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="mvp" type="462c0819:PsiDirectoryNode" />
-              <item name="SearchResultsFragment" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -528,10 +491,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="706" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23975721" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23975721" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -541,15 +503,15 @@
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="1" />
-      <window_info anchor="bottom" id="Logcat" order="2" sideWeight="0.7336874" visible="true" weight="0.05464481" />
+      <window_info anchor="bottom" id="Logcat" order="2" sideWeight="0.7336874" weight="0.05464481" />
       <window_info anchor="bottom" id="TODO" order="3" />
       <window_info anchor="bottom" id="Android Profiler" order="4" />
       <window_info anchor="bottom" id="Debug" order="5" />
       <window_info anchor="bottom" id="Terminal" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.2663126" side_tool="true" weight="0.91862565" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.7344461" weight="0.9453552" />
-      <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49620637" weight="0.66484517" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.284153" />
+      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.7344461" weight="0.05464481" />
+      <window_info active="true" anchor="bottom" id="Find" order="10" sideWeight="0.49620637" visible="true" weight="0.05464481" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -576,7 +538,8 @@
     <MESSAGE value="Added separate subComponents for each screen of my app. This provides presenter module in the current state, and if there are any other modules needed in the future just need to crate a module to provide its instances." />
     <MESSAGE value="Fixed errors, running correctly with new dagger setup." />
     <MESSAGE value="added method variables for casting specific view in modelInteractor to fix loading indicator issues." />
-    <option name="LAST_COMMIT_MESSAGE" value="added method variables for casting specific view in modelInteractor to fix loading indicator issues." />
+    <MESSAGE value="Fixed error in detail fragment where on some occasions would show try again , no internet connection. Was caused by a call to ShowTryAgain() in application model rather then showNoResults(). It is unlikely that this SHowNoResults will be activated since there is a double check for internet. But this could happen if there is a change in the API or some other sort of crash so i will implement a message to be displayed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed error in detail fragment where on some occasions would show try again , no internet connection. Was caused by a call to ShowTryAgain() in application model rather then showNoResults(). It is unlikely that this SHowNoResults will be activated since there is a double check for internet. But this could happen if there is a change in the API or some other sort of crash so i will implement a message to be displayed." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/example/ForecastApp/model/Objects/Main_Elements/Forecast.java">
@@ -604,14 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_recent_item.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -656,21 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_detail_f.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/WeatherDetailAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_detail_item.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
@@ -700,20 +640,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/DetailFeatureModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/SearchFeatureModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/DetailFeatureModule.kt" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/SearchFeatureModule.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/NetworkModule.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -724,16 +652,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Search/DetailFeatureModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Search/FragmentScope.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Search/DetailFeatureModule.kt" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Search/FragmentScope.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainActivity/MainActivityContract.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -759,13 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1219">
-          <caret line="17" column="65" lean-forward="true" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -870,58 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPresenterModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="66" column="49" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/MainScreenFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="155" column="17" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentContract.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding>
-            <element signature="e#53#192#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentContract.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
@@ -929,20 +790,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentContract.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentContract.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="345">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/BaseContract.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="192">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#37#130#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPresenterModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/MainScreenFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/WeatherDetailAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-782">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#2717#2831#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_recent_item.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_detail_f.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/WeatherDetailFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="111" column="23" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
         </state>
       </provider>
     </entry>

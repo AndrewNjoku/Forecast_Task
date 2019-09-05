@@ -52,11 +52,11 @@ class HomeActivity : AppCompatActivity(), OnLocationSelectedListener, MainActivi
 
     override fun showError(error: Throwable?) {
 
-        Toast.makeText(this,"There has been an error:" + error?.localizedMessage,Toast.LENGTH_LONG)
+        Toast.makeText(this,"There has been an error:" + error?.localizedMessage,Toast.LENGTH_LONG).show()
     }
     override fun showTryAgain(b: Boolean) {
 
-        Toast.makeText(this, "There has been a problem, Please try again", Toast.LENGTH_LONG)
+        Toast.makeText(this, "There has been a problem, Please try again", Toast.LENGTH_LONG).show()
     }
 
 
