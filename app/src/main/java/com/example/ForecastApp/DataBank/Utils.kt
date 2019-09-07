@@ -28,6 +28,12 @@ object Utils {
         return dateTimeFormatter.print(dateTime)
     }
 
+    fun getDayFromDate(value: Long): String {
+        val dateTime = DateTime(value * 1000L, DateTimeZone.getDefault()) //Converting to milliseconds
+        val dateTimeFormatter = DateTimeFormat.forPattern("d MMM E h:m a")
+        return dateTimeFormatter.print(dateTime)
+    }
+
     fun isOnline(context: Context): Boolean {
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkInfo = connectivityManager.activeNetworkInfo

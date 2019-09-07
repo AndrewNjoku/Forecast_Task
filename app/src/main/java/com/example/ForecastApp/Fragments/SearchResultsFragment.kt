@@ -49,6 +49,9 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
     lateinit var progressBar: ProgressBar
     @BindView(R.id.search_try_again)
    lateinit var tryAgain: TextView
+    @BindView(R.id.search_no_results)
+    lateinit var noResults: TextView
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -93,7 +96,9 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
     }
 
     override fun showNoResults() {
-      Log.e("DATA","No data to update")
+        searchresults.visibility = View.GONE
+        noResults.visibility = View.VISIBLE
+
     }
 
     override fun showError(error: Throwable?) {
