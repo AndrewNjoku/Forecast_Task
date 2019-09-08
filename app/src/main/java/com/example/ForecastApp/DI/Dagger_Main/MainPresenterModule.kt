@@ -1,13 +1,12 @@
 package com.example.ForecastApp.DI.Dagger_Main
 
 
-import android.content.Context
 import com.example.ForecastApp.Activities.HomeActivity
 import com.example.ForecastApp.DI.Dagger_Composer.FragmentScope
 import com.example.ForecastApp.Database.ForecastDatabase
 import com.example.ForecastApp.Network.ForecastService
 import com.example.ForecastApp.mvp.MainScreenFragment.*
-import com.example.minimoneybox.model.ApplicationModel
+import com.example.ForecastApp.model.ApplicationModel
 import com.example.minimoneybox.model.ApplicationModelContract
 
 import dagger.Module

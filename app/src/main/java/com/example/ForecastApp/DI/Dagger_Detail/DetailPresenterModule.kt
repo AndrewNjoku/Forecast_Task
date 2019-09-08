@@ -6,7 +6,7 @@ import com.example.ForecastApp.Database.ForecastDatabase
 import com.example.ForecastApp.Network.ForecastService
 import com.example.ForecastApp.mvp.DetailFragment.DetailFragmentContract
 import com.example.ForecastApp.mvp.DetailFragment.DetailFragmentPresenter
-import com.example.minimoneybox.model.ApplicationModel
+import com.example.ForecastApp.model.ApplicationModel
 import com.example.minimoneybox.model.ApplicationModelContract
 import dagger.Module
 import dagger.Provides

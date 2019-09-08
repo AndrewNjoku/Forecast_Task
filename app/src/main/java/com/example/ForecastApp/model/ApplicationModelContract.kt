@@ -7,12 +7,9 @@ import com.example.ForecastApp.model.Objects.Main_Elements.Forecast
 
 interface ApplicationModelContract {
 
-
-    fun start()
     fun stop()
     fun addToDb(forecast: Forecast)
     fun handleEmptyDb()
-    fun noStoredData(): Any
     fun handleResultRecent(days: List<Forecast>)
     fun handleResultSearch(days: List<Day>)
     fun handleResultDetail(days: List<Day>)

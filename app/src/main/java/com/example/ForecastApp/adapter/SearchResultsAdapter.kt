@@ -20,12 +20,13 @@ import java.util.Objects
 import butterknife.BindView
 import butterknife.ButterKnife
 import androidx.cardview.widget.CardView
+import com.example.ForecastApp.model.Objects.Main_Elements.Day_w
 
 
 class SearchResultsAdapter() : RecyclerView.Adapter<SearchResultsAdapter.ForecastViewHolder>() {
 
 
-    private val daysinfo: MutableList<Day>
+    private val daysinfo: MutableList<Day_w>
 
 
     interface OnItemClickListener {
@@ -36,7 +37,7 @@ class SearchResultsAdapter() : RecyclerView.Adapter<SearchResultsAdapter.Forecas
         daysinfo = ArrayList()
     }
 
-    fun setData(days: List<Day>) {
+    fun setData(days: List<Day_w>) {
         Objects.requireNonNull(days)
         daysinfo.clear()
         daysinfo.addAll(days)
@@ -82,8 +83,8 @@ class SearchResultsAdapter() : RecyclerView.Adapter<SearchResultsAdapter.Forecas
             resources = itemView.context.resources
         }
 
-        fun bind(day: Day) {
-            Picasso.get().load(Constants.ICON_BASE_URL + (day.weather?.get(0)?.icon) + Constants.ICON_EXTENSION)
+        fun bind(day: Day_w) {
+            Picasso.get().load(Constants.ICON_BASE_URL + (day.icon) + Constants.ICON_EXTENSION)
                     .into(weatherIcon)
             dayAndTime.text = Utils.getDateForLocaleFromUtc(day.dateAndTime)
             condition.text = day.weather?.get(0)?.description?.toUpperCase()

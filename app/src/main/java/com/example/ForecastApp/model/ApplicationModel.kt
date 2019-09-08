@@ -1,4 +1,4 @@
-package com.example.minimoneybox.model
+package com.example.ForecastApp.model
 
 import com.example.ForecastApp.DataBank.Constants
 import com.example.ForecastApp.DataBank.Utils
@@ -11,6 +11,7 @@ import com.example.ForecastApp.mvp.BaseContract
 import com.example.ForecastApp.mvp.DetailFragment.DetailFragmentContract
 import com.example.ForecastApp.mvp.MainScreenFragment.MainScreenFragmentContract
 import com.example.ForecastApp.mvp.MainScreenFragment.SearchResultsFragmentContract
+import com.example.minimoneybox.model.ApplicationModelContract
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -20,8 +21,6 @@ class ApplicationModel (private val myService: ForecastService
                         , private val myDatabase: ForecastDatabase
                         , private val myView: BaseContract.View
                         ): ApplicationModelContract {
-
-
 
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
@@ -45,7 +44,6 @@ class ApplicationModel (private val myService: ForecastService
                 .toObservable()
 
     }
-
 
     //with each forecast add to the database onNext()
   private fun forecastFromAPI(location:String): Observable<Forecast>{
@@ -87,7 +85,6 @@ class ApplicationModel (private val myService: ForecastService
                 .subscribe{ result -> this.handleResultRecent(result!!) })
 
     }
-
     override fun getForecastDayDetails(location:String) {
 
         val view = myView as DetailFragmentContract.View
@@ -100,18 +97,10 @@ class ApplicationModel (private val myService: ForecastService
                 .doOnTerminate { view.showProgress(false) }
                 .doOnError{ error -> view.showError(error)}
                 .subscribe{ result -> this.handleResultDetail(result!!) })
-
     }
 
-    override fun noStoredData(): Boolean {
 
-       // val checkForEmpty = myDatabase.forecastDao().forecast
-        //val check= checkForEmpty.onErrorComplete()
-      // return  (myDatabase.forecastDao().forecast==null)
-        return true
-    }
 
-    override fun start() {}
 
     override fun stop() {
         compositeDisposable.clear()
@@ -134,7 +123,7 @@ class ApplicationModel (private val myService: ForecastService
     override fun handleResultSearch(days: List<Day>) {
         if (days.isEmpty()) {
             myView.showNoResults()
-        } else
+        } else {
             var newList = ArrayList<Day_w>()
             //TODO rather longwinded way of achieving data transformation. Should use RX pipeline to transform data into required form
             //add days of the week in required format
@@ -146,15 +135,10 @@ class ApplicationModel (private val myService: ForecastService
             newList.add(Day_w("Saturday"))
             newList.add(Day_w("Sunday"))
 
-            //here it is neccessery to convery the list of multi days to list of one day per item
             for (day: Day in days) {
                 //if the day is the same
                 when (Utils.getDayFromDate(day.dateAndTime)) {
-//for each day (there will be multiple Day elements for each day) we will add the temperature to a list stored in the Day_W object
-// finally after carrying out the for loop we will initiate a calulation of the minimum and max temp per day by sorting the arraylist
-// and finally we will set the min and max temps and pass this data to the view to updae the adapter.
-                    //Todo i can just simply pass the day object into a method inside of Day_W to instantiate the required data
-                    // without bulking up this method which should really be kept clean
+
                     "Monday" -> newList[0].parse(day)
                     "Tuesday" -> newList[1].parse(day)
                     "Wednesday" -> newList[2].parse(day)
@@ -165,22 +149,20 @@ class ApplicationModel (private val myService: ForecastService
 
                 }
             }
-
             //For each day in the week
-
-                for (day_w: Day_w in newList) {
-
-                    //sort the list of temperatures
-                    day_w.dailyTemps.sort()
-                    //index 0 is min temp, index 3 is max temp : 4 x 3 hour readings for each day
-                    day_w.minTemp = day_w.dailyTemps[0]
-                    day_w.maxTemp = day_w.dailyTemps[3]
-                }
+            for (day_w: Day_w in newList) {
+                //sort the list of temperatures
+                day_w.dailyTemps.sort()
+                //index 0 is min temp, index 3 is max temp : 4 x 3 hour readings for each day
+                day_w.minTemp = day_w.dailyTemps[0]
+                day_w.maxTemp = day_w.dailyTemps[3]
+            }
 
             myView.showResults(newList)
 
 
-            }
+        }
+    }
 
 
     override fun handleResultDetail(days: List<Day>) {

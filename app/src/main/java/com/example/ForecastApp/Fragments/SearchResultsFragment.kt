@@ -23,6 +23,7 @@ import com.example.ForecastApp.R
 import com.example.ForecastApp.adapter.SearchResultsAdapter
 import com.example.ForecastApp.application.App
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
+import com.example.ForecastApp.model.Objects.Main_Elements.Day_w
 import com.example.ForecastApp.mvp.MainActivity.MainActivityContract
 import com.example.ForecastApp.mvp.MainScreenFragment.SearchResultsFragmentContract
 import java.lang.ClassCastException
@@ -84,9 +85,9 @@ class SearchResultsFragment : Fragment(),SearchResultsFragmentContract.View{
     }
 
 
-    override fun showResults(days: List<*>) {
+    override fun showResults(days_w: List<*>) {
         try {
-            forecastAdapter.setData(days as List<Day>)
+            forecastAdapter.setData(days_w as List<Day_w>)
         }
         catch (exception: ClassCastException)
         {

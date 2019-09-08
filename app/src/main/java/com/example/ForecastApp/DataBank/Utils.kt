@@ -2,6 +2,7 @@ package com.example.ForecastApp.DataBank
 
 import android.content.Context
 import android.net.ConnectivityManager
+import android.util.Log
 import com.example.ForecastApp.R
 import com.example.ForecastApp.application.App
 
@@ -28,9 +29,17 @@ object Utils {
         return dateTimeFormatter.print(dateTime)
     }
 
+    fun getDateAndDay(value: Long): String {
+        val dateTime = DateTime(value * 1000L, DateTimeZone.getDefault()) //Converting to milliseconds
+        val dateTimeFormatter = DateTimeFormat.forPattern("EEE, MMM d,")
+        Log.e("DATETIME","date + day convertion:"+dateTimeFormatter.print(dateTime))
+        return dateTimeFormatter.print(dateTime)
+    }
+
     fun getDayFromDate(value: Long): String {
         val dateTime = DateTime(value * 1000L, DateTimeZone.getDefault()) //Converting to milliseconds
-        val dateTimeFormatter = DateTimeFormat.forPattern("d MMM E h:m a")
+        val dateTimeFormatter = DateTimeFormat.forPattern("EEEE")
+        Log.e("DATETIME","day convertion:"+dateTimeFormatter.print(dateTime))
         return dateTimeFormatter.print(dateTime)
     }
 
