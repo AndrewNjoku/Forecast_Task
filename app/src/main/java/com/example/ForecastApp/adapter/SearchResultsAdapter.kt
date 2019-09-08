@@ -63,7 +63,7 @@ class SearchResultsAdapter() : RecyclerView.Adapter<SearchResultsAdapter.Forecas
     class ForecastViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         @Nullable
         @BindView(R.id.s_day)
-        lateinit var dayAndTime: TextView
+        lateinit var DateAndDay: TextView
         @Nullable
         @BindView(R.id.r_condition)
         lateinit var condition: TextView
@@ -86,11 +86,11 @@ class SearchResultsAdapter() : RecyclerView.Adapter<SearchResultsAdapter.Forecas
         fun bind(day: Day_w) {
             Picasso.get().load(Constants.ICON_BASE_URL + (day.icon) + Constants.ICON_EXTENSION)
                     .into(weatherIcon)
-            dayAndTime.text = Utils.getDateForLocaleFromUtc(day.dateAndTime)
-            condition.text = day.weather?.get(0)?.description?.toUpperCase()
-            clouds.text = resources.getString(R.string.cloud_percentage, day.clouds?.all)
-            val tempMin = Utils.getCelsiusFromKelvin(day.main?.tempMin)
-            val tempMax = Utils.getCelsiusFromKelvin(day.main?.tempMax)
+            DateAndDay.text = day.dateDay
+            condition.text = day.condition
+            clouds.text = day.clouds.toString()
+            val tempMin = day.minTemp
+            val tempMax = day.maxTemp
             temparature.text = "$tempMin - $tempMax"
             wind.text = resources.getString(R.string.wind_speed,
                     Utils.roundDoubleToTwoDecimalPoints(day.wind?.speed))

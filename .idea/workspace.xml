@@ -9,18 +9,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="253a9b01-4ab5-448c-9539-fe0b64c6dc45" name="Default Changelist" comment="Fixed error in detail fragment where on some occasions would show try again , no internet connection. Was caused by a call to ShowTryAgain() in application model rather then showNoResults(). It is unlikely that this SHowNoResults will be activated since there is a double check for internet. But this could happen if there is a change in the API or some other sort of crash so i will implement a message to be displayed.">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Main_Elements/Day_w.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+    <list default="true" id="253a9b01-4ab5-448c-9539-fe0b64c6dc45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_results_frame.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_results_frame.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Main_Elements/Day_w.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Main_Elements/Day_w.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +45,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="183" column="8" lean-forward="true" selection-start-line="183" selection-start-column="8" selection-end-line="183" selection-end-column="8" />
+            <state relative-caret-position="115">
+              <caret line="160" column="26" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModelContract.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -65,11 +66,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Main_Elements/Day_w.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state relative-caret-position="575">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
-                <element signature="e#62#203#0" expanded="true" />
+                <element signature="e#61#248#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Supporting_Elements/Clouds.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -101,13 +111,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="85" column="59" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="83" />
+            <state relative-caret-position="116">
+              <caret line="87" column="23" lean-forward="true" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
               <folding>
-                <element signature="e#2816#2879#0" expanded="true" />
+                <element signature="e#3101#3215#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,27 +126,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Utils.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+            <state relative-caret-position="153">
+              <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_results_frame.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="36" column="12" selection-start-line="35" selection-start-column="44" selection-end-line="45" selection-end-column="56" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="97" selection-start-line="97" selection-end-line="101" selection-end-column="5" />
+            <state relative-caret-position="199">
+              <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -171,11 +171,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/forecast_recent_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/RecentSearchesAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/WeatherDetailAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/forecast_detail_f.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/forecast_detail_item.xml" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/example/ForecastApp/ExampleUnitTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModelContract.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Weather_Feature/WeatherFeatureComponent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Weather_Feature/MainFeatureModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Weather_Feature/DetailFeatureModule.kt" />
@@ -204,10 +202,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Activities/HomeActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/search_results_frame.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModelContract.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Utils.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Main_Elements/Day_w.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt" />
       </list>
     </option>
   </component>
@@ -524,7 +524,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567684423453</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Created a new object Day_W , which represents a day in the week. As opposed to the Day object which, confusingly represents multiple 3 hourly increments of a single day. This will allow me to calculate accurate min-max temps and represent the daily values in my search results page.">
+      <created>1567890745903</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1567890745903</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Created methods inside utility, to convert the datetime to just the day as well as day and date to filter same days and also display day and date for the search results view. Will move onto testing in mockito.">
+      <created>1567942056396</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1567942056396</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -578,19 +592,11 @@
     <MESSAGE value="Fixed errors, running correctly with new dagger setup." />
     <MESSAGE value="added method variables for casting specific view in modelInteractor to fix loading indicator issues." />
     <MESSAGE value="Fixed error in detail fragment where on some occasions would show try again , no internet connection. Was caused by a call to ShowTryAgain() in application model rather then showNoResults(). It is unlikely that this SHowNoResults will be activated since there is a double check for internet. But this could happen if there is a change in the API or some other sort of crash so i will implement a message to be displayed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed error in detail fragment where on some occasions would show try again , no internet connection. Was caused by a call to ShowTryAgain() in application model rather then showNoResults(). It is unlikely that this SHowNoResults will be activated since there is a double check for internet. But this could happen if there is a change in the API or some other sort of crash so i will implement a message to be displayed." />
+    <MESSAGE value="Created a new object Day_W , which represents a day in the week. As opposed to the Day object which, confusingly represents multiple 3 hourly increments of a single day. This will allow me to calculate accurate min-max temps and represent the daily values in my search results page." />
+    <MESSAGE value="Created methods inside utility, to convert the datetime to just the day as well as day and date to filter same days and also display day and date for the search results view. Will move onto testing in mockito." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created methods inside utility, to convert the datetime to just the day as well as day and date to filter same days and also display day and date for the search results view. Will move onto testing in mockito." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/RecentSearchesAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="33" column="116" selection-start-line="33" selection-start-column="116" selection-end-line="33" selection-end-column="116" />
-          <folding>
-            <element signature="e#41#507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_detail_frame.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/forecast_search_item.xml">
       <provider editor-type-id="text-editor">
@@ -619,13 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModelContract.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -872,34 +871,10 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Utils.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Supporting_Elements/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="97" selection-start-line="97" selection-end-line="101" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="85" column="59" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="83" />
-          <folding>
-            <element signature="e#2816#2879#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -917,20 +892,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Main_Elements/Day_w.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Supporting_Elements/Clouds.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding>
-            <element signature="e#62#203#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="92">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModelContract.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModel.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="183" column="8" lean-forward="true" selection-start-line="183" selection-start-column="8" selection-end-line="183" selection-end-column="8" />
+        <state relative-caret-position="115">
+          <caret line="160" column="26" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/SearchResultsFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DataBank/Utils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/Objects/Main_Elements/Day_w.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#61#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/adapter/SearchResultsAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="87" column="23" lean-forward="true" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
+          <folding>
+            <element signature="e#3101#3215#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
