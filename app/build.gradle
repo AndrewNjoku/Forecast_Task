@@ -87,6 +87,11 @@ dependencies {
 
     //ION network libray for searchAutoComplete
     implementation "com.koushikdutta.ion:ion:2.2.1"
+
+    //Mockito
+    testImplementation 'com.nhaarman:mockito-kotlin-kt1.1:1.5.0'
+
+
 }
 repositories {
     mavenCentral()

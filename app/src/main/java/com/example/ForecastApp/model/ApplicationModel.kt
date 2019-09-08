@@ -58,12 +58,14 @@ class ApplicationModel (private val myService: ForecastService
     override fun getForecastSearch(isOnline: Boolean, location:String) {
 
         val view = myView as SearchResultsFragmentContract.View
-
         val observable = if (isOnline) forecastFromAPI(location) else forecastFromDb(location)
+
         compositeDisposable.add(observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map { forecast -> forecast.days }
+                //transform days to days_w
+                .map{ days -> Utils.parseDays(days) }
                 //show progress once subscribed
                 .doOnSubscribe { view.showProgress(true) }
                 .doOnTerminate { view.showProgress(false) }
@@ -120,48 +122,13 @@ class ApplicationModel (private val myService: ForecastService
             myView.showResults(forecasts)
         }
     }
-    override fun handleResultSearch(days: List<Day>) {
-        if (days.isEmpty()) {
+    override fun handleResultSearch(days_w: List<Day_w>) {
+        if (days_w.isEmpty()) {
             myView.showNoResults()
         } else {
-            var newList = ArrayList<Day_w>()
-            //TODO rather longwinded way of achieving data transformation. Should use RX pipeline to transform data into required form
-            //add days of the week in required format
-            newList.add(Day_w("Monday"))
-            newList.add(Day_w("Tuesday"))
-            newList.add(Day_w("Wednesday"))
-            newList.add(Day_w("Thursday"))
-            newList.add(Day_w("Friday"))
-            newList.add(Day_w("Saturday"))
-            newList.add(Day_w("Sunday"))
-
-            for (day: Day in days) {
-                //if the day is the same
-                when (Utils.getDayFromDate(day.dateAndTime)) {
-
-                    "Monday" -> newList[0].parse(day)
-                    "Tuesday" -> newList[1].parse(day)
-                    "Wednesday" -> newList[2].parse(day)
-                    "Thursday" -> newList[3].parse(day)
-                    "Friday" -> newList[4].parse(day)
-                    "Saurday" -> newList[5].parse(day)
-                    "Sunday" -> newList[6].parse(day)
-
-                }
-            }
-            //For each day in the week
-            for (day_w: Day_w in newList) {
-                //sort the list of temperatures
-                day_w.dailyTemps.sort()
-                //index 0 is min temp, index 3 is max temp : 4 x 3 hour readings for each day
-                day_w.minTemp = day_w.dailyTemps[0]
-                day_w.maxTemp = day_w.dailyTemps[3]
-            }
-
-            myView.showResults(newList)
-
-
+            myView.showResults(days_w)
         }
+
     }
 
 

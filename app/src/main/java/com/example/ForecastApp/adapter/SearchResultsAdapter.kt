@@ -1,8 +1,6 @@
 package com.example.ForecastApp.adapter
 
-import android.annotation.SuppressLint
 import android.content.res.Resources
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,21 +11,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ForecastApp.DataBank.Constants
 import com.example.ForecastApp.R
 import com.example.ForecastApp.DataBank.Utils
-import com.example.ForecastApp.model.Objects.Main_Elements.Day
 import com.squareup.picasso.Picasso
 import java.util.ArrayList
 import java.util.Objects
 import butterknife.BindView
 import butterknife.ButterKnife
-import androidx.cardview.widget.CardView
 import com.example.ForecastApp.model.Objects.Main_Elements.Day_w
 
 
-class SearchResultsAdapter() : RecyclerView.Adapter<SearchResultsAdapter.ForecastViewHolder>() {
-
+class SearchResultsAdapter: RecyclerView.Adapter<SearchResultsAdapter.ForecastViewHolder>() {
 
     private val daysinfo: MutableList<Day_w>
-
 
     interface OnItemClickListener {
         fun onItemClick(v: View, position: Int)

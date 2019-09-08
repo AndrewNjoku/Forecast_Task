@@ -2,6 +2,7 @@ package com.example.minimoneybox.model
 
 
 import com.example.ForecastApp.model.Objects.Main_Elements.Day
+import com.example.ForecastApp.model.Objects.Main_Elements.Day_w
 import com.example.ForecastApp.model.Objects.Main_Elements.Forecast
 
 
@@ -11,7 +12,7 @@ interface ApplicationModelContract {
     fun addToDb(forecast: Forecast)
     fun handleEmptyDb()
     fun handleResultRecent(days: List<Forecast>)
-    fun handleResultSearch(days: List<Day>)
+    fun handleResultSearch(days: List<Day_w>)
     fun handleResultDetail(days: List<Day>)
     fun getForecastSearch(isOnline: Boolean, location: String)
     fun getRecentForecasts()
