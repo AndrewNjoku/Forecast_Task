@@ -1,15 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.material:material:1.1.0-alpha09@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a1408549e86ee95edc9d78c2ca7de5e/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/702dcdcf2c61b5d7c78a447563e34055/material-1.1.0-alpha09/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a1408549e86ee95edc9d78c2ca7de5e/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a1408549e86ee95edc9d78c2ca7de5e/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/702dcdcf2c61b5d7c78a447563e34055/material-1.1.0-alpha09/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/702dcdcf2c61b5d7c78a447563e34055/material-1.1.0-alpha09/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.1.0-alpha09/583e6b564484c783cc9df424960e3b44c426fe8d/material-1.1.0-alpha09-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.1.0-alpha09/583e6b564484c783cc9df424960e3b44c426fe8d/material-1.1.0-alpha09-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

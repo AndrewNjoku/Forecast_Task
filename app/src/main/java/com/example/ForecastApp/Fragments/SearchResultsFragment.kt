@@ -1,9 +1,10 @@
 package com.example.ForecastApp.Fragments
 
+import android.app.Fragment
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import android.content.Context
+
 import android.os.Bundle
 import android.util.Log
 

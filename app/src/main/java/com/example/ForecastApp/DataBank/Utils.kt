@@ -58,6 +58,8 @@ object Utils {
     }
 
     fun parseDays(days: List<Day>): List<Day_w> {
+
+        //create new arraylist of Day_W objects
         var newList = ArrayList<Day_w>()
 
         for (day: Day in days) {

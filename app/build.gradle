@@ -26,7 +26,7 @@ android {
     }
     compileOptions {
         targetCompatibility 1.8
-        sourceCompatibility 1.8
+        sourceCompatibility "1.8"
     }
 }
 
@@ -90,6 +90,9 @@ dependencies {
 
     //Mockito
     testImplementation 'com.nhaarman:mockito-kotlin-kt1.1:1.5.0'
+
+    //MockWebServer
+    testImplementation "com.squareup.okhttp3:mockwebserver:4.1.1"
 
 
 }

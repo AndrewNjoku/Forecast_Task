@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.activity:activity:1.0.0-rc01@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/33ca038f21aa62a4cded4b5b05639480/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/33ca038f21aa62a4cded4b5b05639480/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/46584df51bb712c75fda2948d2b4d48c/activity-1.0.0-rc01/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/46584df51bb712c75fda2948d2b4d48c/activity-1.0.0-rc01/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.activity/activity/1.0.0-rc01/28eb83e6a29ac3fbb87aa632cfa0e644a313f491/activity-1.0.0-rc01-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/androidx.activity/activity/1.0.0-rc01/28eb83e6a29ac3fbb87aa632cfa0e644a313f491/activity-1.0.0-rc01-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
