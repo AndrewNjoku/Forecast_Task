@@ -16,6 +16,7 @@ interface MainScreenFragmentContract{
 
 
 
+
     }
 
     interface Presenter: BaseContract.Presenter<View> {

@@ -7,7 +7,7 @@ import com.example.ForecastApp.Database.ForecastDatabase
 import com.example.ForecastApp.Network.ForecastService
 import com.example.ForecastApp.mvp.MainScreenFragment.*
 import com.example.ForecastApp.model.ApplicationModel
-import com.example.minimoneybox.model.ApplicationModelContract
+import com.example.minimoneybox.model.WeatherDetailUseCase
 
 import dagger.Module
 import dagger.Provides
@@ -26,7 +26,7 @@ class SearchPresenterModule(private val myView: SearchResultsFragmentContract.Vi
 
 
     @Provides
-    fun provideModelInteractor(service:ForecastService,data:ForecastDatabase, view: SearchResultsFragmentContract.View): ApplicationModelContract{
+    fun provideModelInteractor(service:ForecastService,data:ForecastDatabase, view: SearchResultsFragmentContract.View): WeatherDetailUseCase{
 
         return ApplicationModel(service,data,view)
     }
@@ -34,7 +34,7 @@ class SearchPresenterModule(private val myView: SearchResultsFragmentContract.Vi
 
     @Provides
     @FragmentScope
-    internal fun provideSearchResultsPresenter(myModelInteractor: ApplicationModelContract, myActivity: HomeActivity): SearchResultsFragmentContract.Presenter {
+    internal fun provideSearchResultsPresenter(myModelInteractor: WeatherDetailUseCase, myActivity: HomeActivity): SearchResultsFragmentContract.Presenter {
 
         return SearchResultsFragmentPresenter(myModelInteractor,myActivity)
     }

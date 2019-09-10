@@ -3,11 +3,9 @@ package com.example.ForecastApp.DI.Dagger_Main
 
 import com.example.ForecastApp.DI.Dagger_Composer.FragmentScope
 import com.example.ForecastApp.Database.ForecastDatabase
-import com.example.ForecastApp.Network.ForecastService
 import com.example.ForecastApp.mvp.DetailFragment.DetailFragmentContract
 import com.example.ForecastApp.mvp.DetailFragment.DetailFragmentPresenter
-import com.example.ForecastApp.model.ApplicationModel
-import com.example.minimoneybox.model.ApplicationModelContract
+import com.example.ForecastApp.model.WeatherDetailUseCase
 import dagger.Module
 import dagger.Provides
 
@@ -18,22 +16,23 @@ class DetailPresenterModule(private val myView: DetailFragmentContract.View){
 
     @Provides
     fun provideDetailView(): DetailFragmentContract.View{
+
         return myView
     }
 
 
     @Provides
-    fun provideModelInteractor(service:ForecastService,data:ForecastDatabase, view: DetailFragmentContract.View): ApplicationModelContract{
+    fun provideDetailUseCase(data:ForecastDatabase, view: DetailFragmentContract.View): WeatherDetailUseCase {
 
-        return ApplicationModel(service,data,view)
+        return WeatherDetailUseCase(data,view)
     }
 
 
     @Provides
     @FragmentScope
-    internal fun provideDetailFragmentPresenter(myModelInteractor: ApplicationModelContract): DetailFragmentContract.Presenter {
+    internal fun provideDetailFragmentPresenter(myDetailUseCase: WeatherDetailUseCase): DetailFragmentContract.Presenter {
 
-        return DetailFragmentPresenter(myModelInteractor)
+        return DetailFragmentPresenter(myDetailUseCase)
     }
 
 }

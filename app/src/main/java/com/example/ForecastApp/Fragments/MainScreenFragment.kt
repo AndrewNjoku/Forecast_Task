@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import butterknife.BindView
 import butterknife.ButterKnife
@@ -135,6 +136,12 @@ class MainScreenFragment : Fragment(), MainScreenFragmentContract.View {
         activityView.showError(error)
 
     }
+
+    override fun showNoInternet() {
+
+       Toast.makeText(activity,"Please reconnect to the internet and try again",Toast.LENGTH_SHORT).show()
+    }
+
 
     override fun showTryAgain(b: Boolean) {
 

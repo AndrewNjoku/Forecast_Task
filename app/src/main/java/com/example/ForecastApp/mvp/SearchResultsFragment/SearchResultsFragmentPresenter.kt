@@ -3,9 +3,9 @@ package com.example.ForecastApp.mvp.MainScreenFragment
 import android.content.Context
 import android.util.Log
 import com.example.ForecastApp.DataBank.Utils
-import com.example.minimoneybox.model.ApplicationModelContract
+import com.example.minimoneybox.model.WeatherDetailUseCase
 
-class SearchResultsFragmentPresenter(private val myModelInteractor: ApplicationModelContract, private val context: Context) : SearchResultsFragmentContract.Presenter {
+class SearchResultsFragmentPresenter(private val myModelInteractor: WeatherDetailUseCase, private val context: Context) : SearchResultsFragmentContract.Presenter {
 
     override fun showSearchResults(location: String ){
 

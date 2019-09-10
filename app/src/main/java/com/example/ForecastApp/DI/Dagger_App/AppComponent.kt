@@ -4,7 +4,6 @@ package com.example.ForecastApp.DI.Dagger_App
 import com.example.ForecastApp.DI.Dagger_Main.MainPresenterModule
 import com.example.ForecastApp.DI.Dagger_Composer.DetailComponent
 import com.example.ForecastApp.DI.Dagger_Composer.MainPageComponent
-import com.example.ForecastApp.DI.Dagger_Composer.SearchComponent
 import com.example.ForecastApp.DI.Dagger_Main.DetailPresenterModule
 import com.example.ForecastApp.DI.Dagger_Main.SearchPresenterModule
 import com.example.ForecastApp.Database.ForecastDatabase

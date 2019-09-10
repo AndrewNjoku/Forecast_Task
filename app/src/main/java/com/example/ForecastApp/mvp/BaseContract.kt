@@ -25,6 +25,8 @@ class BaseContract {
 
         fun showTryAgain(b: Boolean)
 
+        fun showNoInternet()
+
     }
 
 }

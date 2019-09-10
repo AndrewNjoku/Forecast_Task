@@ -7,7 +7,7 @@ import com.example.ForecastApp.Database.ForecastDatabase
 import com.example.ForecastApp.Network.ForecastService
 import com.example.ForecastApp.mvp.MainScreenFragment.*
 import com.example.ForecastApp.model.ApplicationModel
-import com.example.minimoneybox.model.ApplicationModelContract
+import com.example.minimoneybox.model.WeatherDetailUseCase
 
 import dagger.Module
 import dagger.Provides
@@ -27,7 +27,7 @@ class MainPresenterModule(private val myView: MainScreenFragmentContract.View,pr
     }
 
     @Provides
-    fun provideModelInteractor(service:ForecastService,data:ForecastDatabase, view: MainScreenFragmentContract.View): ApplicationModelContract{
+    fun provideModelInteractor(service:ForecastService,data:ForecastDatabase, view: MainScreenFragmentContract.View): WeatherDetailUseCase{
 
         return ApplicationModel(service,data,view)
     }
@@ -37,7 +37,7 @@ class MainPresenterModule(private val myView: MainScreenFragmentContract.View,pr
 
     @Provides
     @FragmentScope
-    internal fun provideMainFragmentPresenter(mymodelinteractor: ApplicationModelContract,myActivity:HomeActivity): MainScreenFragmentContract.Presenter {
+    internal fun provideMainFragmentPresenter(mymodelinteractor: WeatherDetailUseCase, myActivity:HomeActivity): MainScreenFragmentContract.Presenter {
 
         return MainScreenFragmentPresenter(mymodelinteractor,myActivity)
     }
