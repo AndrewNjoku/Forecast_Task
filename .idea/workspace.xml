@@ -9,26 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="253a9b01-4ab5-448c-9539-fe0b64c6dc45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/ApplicationModelContract.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/UseCases/RecentWeatherUseCase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/model/UseCases/WeatherSearchUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/AppComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/AppComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Detail/DetailComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Detail/DetailComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Detail/DetailPresenterModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Detail/DetailPresenterModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPageComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPageComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPresenterModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPresenterModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Search/SearchPresenterModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Search/SearchPresenterModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/MainScreenFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/Fragments/MainScreenFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/BaseContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/BaseContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/DetailFragment/DetailFragmentPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/MainScreenFragment/MainScreenFragmentPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/mvp/SearchResultsFragment/SearchResultsFragmentPresenter.kt" afterDir="false" />
-    </list>
+    <list default="true" id="253a9b01-4ab5-448c-9539-fe0b64c6dc45" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -627,15 +608,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568116650233</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="I have normalised the modelInteractor which is essentially a de-normalised use case combination object, satisfying all use cases for my features. This has allowed me to abide by clean code architecture, having seperate use cases with only the needed instances and the interface for the view which abides by dependency inversion, seperation of concerns. I am in the process of refactoring these new use cases into my Dagger architecture to be injected where needed.">
+      <created>1568116734838</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1568116734838</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="974" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23931624" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23931624" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -650,10 +637,10 @@
       <window_info anchor="bottom" id="Android Profiler" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="5" />
       <window_info anchor="bottom" id="Terminal" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.2663126" side_tool="true" weight="0.91862565" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.34981686" side_tool="true" visible="true" weight="0.6269841" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.284153" />
       <window_info anchor="bottom" id="Build" order="9" sideWeight="0.7344461" weight="0.26644737" />
-      <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49620637" visible="true" weight="0.054421768" />
+      <window_info anchor="bottom" id="Find" order="10" sideWeight="0.65018314" visible="true" weight="0.6269841" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
