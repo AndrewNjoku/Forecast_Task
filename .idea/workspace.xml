@@ -112,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPageComponent.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -620,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568043840778</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="I have normalised the modelInteractor which is essentially a de-normalised use case combination object, satisfying all use cases for my features. This has allowed me to abide by clean code architecture, having seperate use cases with only the needed instances and the interface for the view which abides by dependency inversion, seperation of concerns. I am in the process of refactoring these new use cases into my Dagger architecture to be injected where needed.">
+      <created>1568116650233</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1568116650233</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -679,7 +686,8 @@
     <MESSAGE value="Created methods inside utility, to convert the datetime to just the day as well as day and date to filter same days and also display day and date for the search results view. Will move onto testing in mockito." />
     <MESSAGE value="Changed the searchResults adapter to accept the new Day_w object. Updated bind method to display necessary information for the recyclerview." />
     <MESSAGE value="For the purpouse of learning to use clean code architecture in the correct fashion, i am creating a use case package in which i will normalise my applicationmodelInteractor into its constituent use cases. This will help me to understand dependency inversion and the correct pipeline for implementing clean code architecture." />
-    <option name="LAST_COMMIT_MESSAGE" value="For the purpouse of learning to use clean code architecture in the correct fashion, i am creating a use case package in which i will normalise my applicationmodelInteractor into its constituent use cases. This will help me to understand dependency inversion and the correct pipeline for implementing clean code architecture." />
+    <MESSAGE value="I have normalised the modelInteractor which is essentially a de-normalised use case combination object, satisfying all use cases for my features. This has allowed me to abide by clean code architecture, having seperate use cases with only the needed instances and the interface for the view which abides by dependency inversion, seperation of concerns. I am in the process of refactoring these new use cases into my Dagger architecture to be injected where needed." />
+    <option name="LAST_COMMIT_MESSAGE" value="I have normalised the modelInteractor which is essentially a de-normalised use case combination object, satisfying all use cases for my features. This has allowed me to abide by clean code architecture, having seperate use cases with only the needed instances and the interface for the view which abides by dependency inversion, seperation of concerns. I am in the process of refactoring these new use cases into my Dagger architecture to be injected where needed." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_App/AppModule.kt">
@@ -1024,7 +1032,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ForecastApp/DI/Dagger_Main/MainPageComponent.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
         </state>
       </provider>
     </entry>
